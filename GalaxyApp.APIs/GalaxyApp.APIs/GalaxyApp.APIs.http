@@ -1,0 +1,6 @@
+@GalaxyApp.APIs_HostAddress = http://localhost:5014
+
+GET {{GalaxyApp.APIs_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

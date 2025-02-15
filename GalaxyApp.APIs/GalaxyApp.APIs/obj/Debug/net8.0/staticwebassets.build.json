@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "6PKaYOnBqRyPKMxi7X8pjNV+PZqAuj+0hCcfblVfY5c=",
+  "Source": "GalaxyApp.APIs",
+  "BasePath": "_content/GalaxyApp.APIs",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

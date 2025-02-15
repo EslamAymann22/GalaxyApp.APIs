@@ -1,0 +1,80 @@
+
+using GalaxyApp.Data.Entities.Identity;
+using GalaxyApp.Infrastructure.DbContextData;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using GalaxyApp.Infrastructure;
+using GalaxyApp.Core;
+
+
+namespace GalaxyApp.APIs
+{
+    public class Program
+    {
+        public static async Task Main(string[] args)
+        {
+            var builder = WebApplication.CreateBuilder(args);
+
+            // Add services to the container.
+
+            builder.Services.AddControllers();
+            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+            builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddSwaggerGen();
+
+            builder.Services.AddDbContext<GalaxyDbContext>(Options =>
+            {
+                Options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+            });
+
+            builder.Services.AddIdentity<AppUser, IdentityRole>()
+                         .AddEntityFrameworkStores<GalaxyDbContext>();
+
+            builder.Services.AddInfrastructureDependencies()
+                            .AddServicesDependencies()
+                            .AddCoreDependencies();
+
+
+            var app = builder.Build();
+
+
+            #region AutoDatabaseUpdate 
+            using var Scope = app.Services.CreateScope();
+            var Services = Scope.ServiceProvider;
+            var LoggerFactory = Services.GetRequiredService<ILoggerFactory>();
+
+            try
+            {
+                var DbContext = Services.GetRequiredService<GalaxyDbContext>();
+
+                await DbContext.Database.MigrateAsync();
+
+            }
+            catch (Exception ex)
+            {
+
+                var Logger = LoggerFactory.CreateLogger<Program>();
+                Logger.LogError(ex, "Error During Update database in Program\n");
+
+            }
+            #endregion
+
+
+            // Configure the HTTP request pipeline.
+            if (app.Environment.IsDevelopment())
+            {
+                app.UseSwagger();
+                app.UseSwaggerUI();
+            }
+
+            app.UseHttpsRedirection();
+
+            app.UseAuthorization();
+
+
+            app.MapControllers();
+
+            app.Run();
+        }
+    }
+}

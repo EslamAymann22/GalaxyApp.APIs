@@ -1,0 +1,12 @@
+C:\C#\GalaxyApp.APIs\GalaxyApp.Data\bin\Debug\net8.0\GalaxyApp.Data.deps.json
+C:\C#\GalaxyApp.APIs\GalaxyApp.Data\bin\Debug\net8.0\GalaxyApp.Data.dll
+C:\C#\GalaxyApp.APIs\GalaxyApp.Data\bin\Debug\net8.0\GalaxyApp.Data.pdb
+C:\C#\GalaxyApp.APIs\GalaxyApp.Data\obj\Debug\net8.0\GalaxyApp.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\C#\GalaxyApp.APIs\GalaxyApp.Data\obj\Debug\net8.0\GalaxyApp.Data.AssemblyInfoInputs.cache
+C:\C#\GalaxyApp.APIs\GalaxyApp.Data\obj\Debug\net8.0\GalaxyApp.Data.AssemblyInfo.cs
+C:\C#\GalaxyApp.APIs\GalaxyApp.Data\obj\Debug\net8.0\GalaxyApp.Data.csproj.CoreCompileInputs.cache
+C:\C#\GalaxyApp.APIs\GalaxyApp.Data\obj\Debug\net8.0\GalaxyApp.Data.dll
+C:\C#\GalaxyApp.APIs\GalaxyApp.Data\obj\Debug\net8.0\refint\GalaxyApp.Data.dll
+C:\C#\GalaxyApp.APIs\GalaxyApp.Data\obj\Debug\net8.0\GalaxyApp.Data.pdb
+C:\C#\GalaxyApp.APIs\GalaxyApp.Data\obj\Debug\net8.0\ref\GalaxyApp.Data.dll
+C:\C#\GalaxyApp.APIs\GalaxyApp.Data\obj\Debug\net8.0\GalaxyApp.Data.csproj.AssemblyReference.cache

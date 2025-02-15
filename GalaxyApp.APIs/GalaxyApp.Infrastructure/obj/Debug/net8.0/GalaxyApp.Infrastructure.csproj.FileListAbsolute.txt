@@ -1,0 +1,15 @@
+C:\C#\GalaxyApp.APIs\GalaxyApp.Infrastructure\bin\Debug\net8.0\GalaxyApp.Infrastructure.deps.json
+C:\C#\GalaxyApp.APIs\GalaxyApp.Infrastructure\bin\Debug\net8.0\GalaxyApp.Infrastructure.dll
+C:\C#\GalaxyApp.APIs\GalaxyApp.Infrastructure\bin\Debug\net8.0\GalaxyApp.Infrastructure.pdb
+C:\C#\GalaxyApp.APIs\GalaxyApp.Infrastructure\bin\Debug\net8.0\GalaxyApp.Data.dll
+C:\C#\GalaxyApp.APIs\GalaxyApp.Infrastructure\bin\Debug\net8.0\GalaxyApp.Data.pdb
+C:\C#\GalaxyApp.APIs\GalaxyApp.Infrastructure\obj\Debug\net8.0\GalaxyApp.Infrastructure.csproj.AssemblyReference.cache
+C:\C#\GalaxyApp.APIs\GalaxyApp.Infrastructure\obj\Debug\net8.0\GalaxyApp.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\C#\GalaxyApp.APIs\GalaxyApp.Infrastructure\obj\Debug\net8.0\GalaxyApp.Infrastructure.AssemblyInfoInputs.cache
+C:\C#\GalaxyApp.APIs\GalaxyApp.Infrastructure\obj\Debug\net8.0\GalaxyApp.Infrastructure.AssemblyInfo.cs
+C:\C#\GalaxyApp.APIs\GalaxyApp.Infrastructure\obj\Debug\net8.0\GalaxyApp.Infrastructure.csproj.CoreCompileInputs.cache
+C:\C#\GalaxyApp.APIs\GalaxyApp.Infrastructure\obj\Debug\net8.0\GalaxyAp.774DC485.Up2Date
+C:\C#\GalaxyApp.APIs\GalaxyApp.Infrastructure\obj\Debug\net8.0\GalaxyApp.Infrastructure.dll
+C:\C#\GalaxyApp.APIs\GalaxyApp.Infrastructure\obj\Debug\net8.0\refint\GalaxyApp.Infrastructure.dll
+C:\C#\GalaxyApp.APIs\GalaxyApp.Infrastructure\obj\Debug\net8.0\GalaxyApp.Infrastructure.pdb
+C:\C#\GalaxyApp.APIs\GalaxyApp.Infrastructure\obj\Debug\net8.0\ref\GalaxyApp.Infrastructure.dll
