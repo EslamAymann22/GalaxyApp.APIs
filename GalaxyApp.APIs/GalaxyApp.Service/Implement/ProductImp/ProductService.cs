@@ -18,6 +18,18 @@ namespace GalaxyApp.Service.Implement.ProductImp
             this._productRepo = productRepo;
         }
 
+        public async Task<bool> AddAsync(Product product)
+        {
+            var productToAdd = (await _productRepo.GetAllAsync())
+                .Where(P => P.Color == product.Color && P.Name == product.Name).FirstOrDefault();
+
+            if (productToAdd != null) return false;
+
+            await _productRepo.AddAsync(product);
+            return true;
+
+        }
+
         public async Task<List<Product>> GetAllAsync()
         => await _productRepo.GetAllAsync();
 

@@ -9,7 +9,73 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "GalaxyApp.Core.ResponseBase.BaseResponse\u00601[[System.Collections.Generic.List\u00601[[GalaxyApp.Core.Features.Products.Queries.Handlers.GetAllProductDto, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "GalaxyApp.Core.BaseResponse.BaseResponse\u00601[[System.Collections.Generic.List\u00601[[GalaxyApp.Core.Features.Products.Queries.Handlers.GetAllProductHandlerDto.GetAllProductDto, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GalaxyApp.APIs.Controllers.ProductController",
+    "Method": "CreateProduct",
+    "RelativePath": "api/Product",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "GalaxyApp.Core.Features.Products.Commands.CreateCommand.CreateProductModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "GalaxyApp.Core.BaseResponse.BaseResponse\u00601[[GalaxyApp.Core.Features.Products.Commands.CreateCommand.CreateProductModel, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GalaxyApp.APIs.Controllers.ProductController",
+    "Method": "GetAllShopProducts",
+    "RelativePath": "api/Product/Shop",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "GalaxyApp.Core.BaseResponse.BaseResponse\u00601[[System.Collections.Generic.List\u00601[[GalaxyApp.Core.Features.Products.Queries.Handlers.GetAllProductHandlerDto.GetAllShopProductDto, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GalaxyApp.APIs.Controllers.ProductController",
+    "Method": "GetAllWarehouseProducts",
+    "RelativePath": "api/Product/Warehouse",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "GalaxyApp.Core.BaseResponse.BaseResponse\u00601[[System.Collections.Generic.List\u00601[[GalaxyApp.Core.Features.Products.Queries.Handlers.GetAllProductHandlerDto.GetAllWarehouseProductDto, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

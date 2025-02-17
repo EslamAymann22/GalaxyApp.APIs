@@ -13,5 +13,7 @@ namespace GalaxyApp.Service.Interfaces.ProductInterface
         Task<List<Product>> GetAllAsync();
         Task<Product> GetByIdAsync(int Id);
 
+        Task<bool> AddAsync(Product product);
+
     }
 }

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GalaxyApp.Core.Features.Products.Queries.Handlers
+namespace GalaxyApp.Core.Features.Products.Queries.Handlers.GetAllProductHandlerDto
 {
-    public class GetAllProductDto
+    public class GetAllShopProductDto
     {
 
         public string Name { get; set; }

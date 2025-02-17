@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GalaxyApp.Infrastructure.Migrations
 {
     [DbContext(typeof(GalaxyDbContext))]
-    [Migration("20250215023640_init")]
+    [Migration("20250217183100_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -207,18 +207,16 @@ namespace GalaxyApp.Infrastructure.Migrations
                     b.Property<decimal>("PurchasingPrice")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int>("Quantity")
+                    b.Property<int>("ShopQuantity")
                         .HasColumnType("int");
 
-                    b.Property<int?>("WarehouseId")
+                    b.Property<int>("WarehouseQuantity")
                         .HasColumnType("int");
 
                     b.Property<decimal>("sellingPrice")
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("WarehouseId");
 
                     b.ToTable("products");
                 });
@@ -270,23 +268,6 @@ namespace GalaxyApp.Infrastructure.Migrations
                     b.HasIndex("LatestPurchaseId");
 
                     b.ToTable("suppliers");
-                });
-
-            modelBuilder.Entity("GalaxyApp.Data.Entities.Warehouse", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("warehouses");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -448,13 +429,6 @@ namespace GalaxyApp.Infrastructure.Migrations
                     b.Navigation("ItemProduct");
                 });
 
-            modelBuilder.Entity("GalaxyApp.Data.Entities.Product", b =>
-                {
-                    b.HasOne("GalaxyApp.Data.Entities.Warehouse", null)
-                        .WithMany("Products")
-                        .HasForeignKey("WarehouseId");
-                });
-
             modelBuilder.Entity("GalaxyApp.Data.Entities.Supplier", b =>
                 {
                     b.HasOne("GalaxyApp.Data.Entities.Purchase", "LatestPurchase")
@@ -530,11 +504,6 @@ namespace GalaxyApp.Infrastructure.Migrations
             modelBuilder.Entity("GalaxyApp.Data.Entities.Purchase", b =>
                 {
                     b.Navigation("PurchaseItems");
-                });
-
-            modelBuilder.Entity("GalaxyApp.Data.Entities.Warehouse", b =>
-                {
-                    b.Navigation("Products");
                 });
 #pragma warning restore 612, 618
         }

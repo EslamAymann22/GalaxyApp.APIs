@@ -21,7 +21,7 @@ namespace GalaxyApp.Infrastructure.DbContextData
         public DbSet<CustomerInvoice> customerInvoices{ get; set; }
         public DbSet<Purchase> purchases { get; set; }
         public DbSet<Supplier> suppliers { get; set; }
-        public DbSet<Warehouse>  warehouses { get; set; }
+
         public GalaxyDbContext (DbContextOptions<GalaxyDbContext> Options) : base(Options)
         {
 
@@ -31,8 +31,6 @@ namespace GalaxyApp.Infrastructure.DbContextData
         {
 
             builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-
-
             base.OnModelCreating(builder);
         }
 

@@ -5,7 +5,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GalaxyApp.Core.ResponseBase
+namespace GalaxyApp.Core.BaseResponse
 {
     public class BaseResponse<T>
     {

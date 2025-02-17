@@ -66,6 +66,28 @@ namespace GalaxyApp.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "products",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PurchasingPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    sellingPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    WarehouseQuantity = table.Column<int>(type: "int", nullable: false),
+                    ShopQuantity = table.Column<int>(type: "int", nullable: false),
+                    Discount = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    Color = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Evaluation = table.Column<int>(type: "int", nullable: false),
+                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ImageFileName = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_products", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "purchases",
                 columns: table => new
                 {
@@ -77,19 +99,6 @@ namespace GalaxyApp.Infrastructure.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_purchases", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "warehouses",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_warehouses", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -241,33 +250,6 @@ namespace GalaxyApp.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "products",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    PurchasingPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    sellingPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    Quantity = table.Column<int>(type: "int", nullable: false),
-                    Discount = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    Color = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Evaluation = table.Column<int>(type: "int", nullable: false),
-                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ImageFileName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    WarehouseId = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_products", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_products_warehouses_WarehouseId",
-                        column: x => x.WarehouseId,
-                        principalTable: "warehouses",
-                        principalColumn: "Id");
-                });
-
-            migrationBuilder.CreateTable(
                 name: "InvoiceItems",
                 columns: table => new
                 {
@@ -361,11 +343,6 @@ namespace GalaxyApp.Infrastructure.Migrations
                 column: "PurchaseId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_products_WarehouseId",
-                table: "products",
-                column: "WarehouseId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_suppliers_LatestPurchaseId",
                 table: "suppliers",
                 column: "LatestPurchaseId");
@@ -412,9 +389,6 @@ namespace GalaxyApp.Infrastructure.Migrations
 
             migrationBuilder.DropTable(
                 name: "customers");
-
-            migrationBuilder.DropTable(
-                name: "warehouses");
         }
     }
 }

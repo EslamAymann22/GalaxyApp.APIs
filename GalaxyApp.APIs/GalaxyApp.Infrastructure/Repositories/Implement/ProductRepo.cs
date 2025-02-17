@@ -18,6 +18,13 @@ namespace GalaxyApp.Infrastructure.Repositories.Implement
         {
             _DbContext = DbContext;
         }
+
+        public async Task AddAsync(Product product)
+        {
+            await _DbContext.products.AddAsync(product);
+            await _DbContext.SaveChangesAsync();
+        }
+
         public async Task<List<Product>> GetAllAsync()
             => await _DbContext.products.ToListAsync();
 
