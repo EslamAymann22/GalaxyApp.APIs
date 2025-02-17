@@ -1,4 +1,5 @@
-﻿using GalaxyApp.Core.Features.Products.Queries.Models;
+﻿using AutoMapper;
+using GalaxyApp.Core.ResponseBase;
 using GalaxyApp.Data.Entities;
 using GalaxyApp.Service.Interfaces.ProductInterface;
 using MediatR;
@@ -12,22 +13,30 @@ using System.Threading.Tasks;
 namespace GalaxyApp.Core.Features.Products.Queries.Handlers
 {
 
+    public record GetAllProductModel : IRequest<BaseResponse<List<GetAllProductDto>>>;
 
 
-    public class GetAllProductHandler : IRequestHandler<GetAllProductModel, List<Product>>
+    public class GetAllProductHandler :BaseResponseHandler,
+        
+        IRequestHandler<GetAllProductModel,BaseResponse<List<GetAllProductDto>>>
     {
         private readonly IProductService _productService;
+        private readonly IMapper _mapper;
 
-        public GetAllProductHandler(IProductService productService)
+        public GetAllProductHandler(IProductService productService
+                                    ,IMapper mapper)
         {
             this._productService = productService;
+            this._mapper = mapper;
         }
 
 
-        public async Task<List<Product>> Handle(GetAllProductModel request, CancellationToken cancellationToken)
+        public async Task<BaseResponse<List<GetAllProductDto>>> Handle(GetAllProductModel request, CancellationToken cancellationToken)
         {
-            return await _productService.GetAllAsync();
+            var ProductList = await _productService.GetAllAsync();
+            var MappedProduct = _mapper.Map<List<GetAllProductDto>>(ProductList);
 
+            return Success(MappedProduct);
         }
     }
 

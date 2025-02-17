@@ -1,7 +1,6 @@
-﻿using GalaxyApp.Core.Features.Products.Queries.Models;
-using GalaxyApp.Data.Entities;
+﻿using GalaxyApp.Core.Features.Products.Queries.Handlers;
+using GalaxyApp.Core.ResponseBase;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GalaxyApp.APIs.Controllers
@@ -17,10 +16,10 @@ namespace GalaxyApp.APIs.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<Product>>> GetAllProducts()
+        public async Task<ActionResult<BaseResponse<List<GetAllProductDto>>>> GetAllProducts()
         {
-
             return await _mediator.Send(new GetAllProductModel());
+
         }
 
     }

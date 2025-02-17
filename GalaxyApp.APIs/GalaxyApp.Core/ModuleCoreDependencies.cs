@@ -14,7 +14,7 @@ namespace GalaxyApp.Core
         public static IServiceCollection AddCoreDependencies(this IServiceCollection Service) {
 
             Service.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
-            //Service.AddAutoMapper(Assembly.GetExecutingAssembly());
+            Service.AddAutoMapper(Assembly.GetExecutingAssembly());
             return Service;
 
         }
