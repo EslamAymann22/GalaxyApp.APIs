@@ -3,7 +3,6 @@ using GalaxyApp.Core.BaseResponse;
 using GalaxyApp.Data.Entities;
 using GalaxyApp.Service.Interfaces.ProductInterface;
 using MediatR;
-using System.Net;
 
 namespace GalaxyApp.Core.Features.Products.Commands.Create.CreateCommandHandler
 {
@@ -36,11 +35,9 @@ namespace GalaxyApp.Core.Features.Products.Commands.Create.CreateCommandHandler
         {
             var product = _mapper.Map<Product>(request);
 
-            var Result = await _productService.AddAsync(product);
+            await _productService.AddAsync(product);
 
-            return Result
-                ? Created(request)
-                : Failed<CreateProductModel>(HttpStatusCode.Conflict);
+            return Created(request);
         }
     }
 }

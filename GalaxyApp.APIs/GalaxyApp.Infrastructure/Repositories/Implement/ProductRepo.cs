@@ -2,11 +2,6 @@
 using GalaxyApp.Infrastructure.DbContextData;
 using GalaxyApp.Infrastructure.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GalaxyApp.Infrastructure.Repositories.Implement
 {
@@ -30,5 +25,11 @@ namespace GalaxyApp.Infrastructure.Repositories.Implement
 
         public async Task<Product> GetByIdAsync(int id)
         => await _DbContext.products.Where(P => P.Id == id).FirstOrDefaultAsync();
+
+        public void Update(Product product)
+        {
+            _DbContext.products.Update(product);
+            _DbContext.SaveChanges();
+        }
     }
 }

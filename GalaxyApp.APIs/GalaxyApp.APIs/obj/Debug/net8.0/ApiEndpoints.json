@@ -47,6 +47,32 @@
   },
   {
     "ContainingType": "GalaxyApp.APIs.Controllers.ProductController",
+    "Method": "UpdateProduct",
+    "RelativePath": "api/Product",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "GalaxyApp.Core.Features.Products.Commands.Update.UpdateCommandHandler.UpdateProductModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "GalaxyApp.Core.BaseResponse.BaseResponse\u00601[[GalaxyApp.Core.Features.Products.Commands.Update.UpdateCommandHandler.UpdateProductModel, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GalaxyApp.APIs.Controllers.ProductController",
     "Method": "GetAllShopProducts",
     "RelativePath": "api/Product/Shop",
     "HttpMethod": "GET",

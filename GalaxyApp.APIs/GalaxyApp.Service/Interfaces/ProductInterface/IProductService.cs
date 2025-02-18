@@ -1,9 +1,5 @@
 ﻿using GalaxyApp.Data.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Net;
 
 namespace GalaxyApp.Service.Interfaces.ProductInterface
 {
@@ -13,7 +9,12 @@ namespace GalaxyApp.Service.Interfaces.ProductInterface
         Task<List<Product>> GetAllAsync();
         Task<Product> GetByIdAsync(int Id);
 
-        Task<bool> AddAsync(Product product);
+        Task AddAsync(Product product);
+        void Update(Product product);
+
+        Task<HttpStatusCode> CheckProductUpdate(Product product);
+
+
 
     }
 }
