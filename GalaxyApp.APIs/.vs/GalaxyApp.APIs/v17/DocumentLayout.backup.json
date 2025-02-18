@@ -3,32 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{345F484A-C899-4FE8-BDF9-3E326338FD6A}|GalaxyApp.APIs\\GalaxyApp.APIs.csproj|c:\\users\\hhhh\\desktop\\galaxyapp.apis\\galaxyapp.apis\\galaxyapp.apis\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{345F484A-C899-4FE8-BDF9-3E326338FD6A}|GalaxyApp.APIs\\GalaxyApp.APIs.csproj|solutionrelative:galaxyapp.apis\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D3442260-5CAF-41C0-8D07-FBE9B03B6A3B}|GalaxyApp.Core\\GalaxyApp.Core.csproj|c:\\users\\hhhh\\desktop\\galaxyapp.apis\\galaxyapp.apis\\galaxyapp.core\\validationbehaviors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3442260-5CAF-41C0-8D07-FBE9B03B6A3B}|GalaxyApp.Core\\GalaxyApp.Core.csproj|solutionrelative:galaxyapp.core\\validationbehaviors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3442260-5CAF-41C0-8D07-FBE9B03B6A3B}|GalaxyApp.Core\\GalaxyApp.Core.csproj|c:\\users\\hhhh\\desktop\\galaxyapp.apis\\galaxyapp.apis\\galaxyapp.core\\features\\products\\queries\\handlers\\getallwarehouseproducthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3442260-5CAF-41C0-8D07-FBE9B03B6A3B}|GalaxyApp.Core\\GalaxyApp.Core.csproj|solutionrelative:galaxyapp.core\\features\\products\\queries\\handlers\\getallwarehouseproducthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D3442260-5CAF-41C0-8D07-FBE9B03B6A3B}|GalaxyApp.Core\\GalaxyApp.Core.csproj|c:\\users\\hhhh\\desktop\\galaxyapp.apis\\galaxyapp.apis\\galaxyapp.core\\modulecoredependencies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3442260-5CAF-41C0-8D07-FBE9B03B6A3B}|GalaxyApp.Core\\GalaxyApp.Core.csproj|solutionrelative:galaxyapp.core\\modulecoredependencies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{345F484A-C899-4FE8-BDF9-3E326338FD6A}|GalaxyApp.APIs\\GalaxyApp.APIs.csproj|c:\\users\\hhhh\\desktop\\galaxyapp.apis\\galaxyapp.apis\\galaxyapp.apis\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{345F484A-C899-4FE8-BDF9-3E326338FD6A}|GalaxyApp.APIs\\GalaxyApp.APIs.csproj|solutionrelative:galaxyapp.apis\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{345F484A-C899-4FE8-BDF9-3E326338FD6A}|GalaxyApp.APIs\\GalaxyApp.APIs.csproj|c:\\users\\hhhh\\desktop\\galaxyapp.apis\\galaxyapp.apis\\galaxyapp.apis\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{345F484A-C899-4FE8-BDF9-3E326338FD6A}|GalaxyApp.APIs\\GalaxyApp.APIs.csproj|solutionrelative:galaxyapp.apis\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3442260-5CAF-41C0-8D07-FBE9B03B6A3B}|GalaxyApp.Core\\GalaxyApp.Core.csproj|c:\\users\\hhhh\\desktop\\galaxyapp.apis\\galaxyapp.apis\\galaxyapp.core\\features\\products\\queries\\handlers\\getallshopproducthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3442260-5CAF-41C0-8D07-FBE9B03B6A3B}|GalaxyApp.Core\\GalaxyApp.Core.csproj|solutionrelative:galaxyapp.core\\features\\products\\queries\\handlers\\getallshopproducthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D3442260-5CAF-41C0-8D07-FBE9B03B6A3B}|GalaxyApp.Core\\GalaxyApp.Core.csproj|c:\\users\\hhhh\\desktop\\galaxyapp.apis\\galaxyapp.apis\\galaxyapp.core\\features\\products\\commands\\create\\createcommandvalidator\\createproductvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3442260-5CAF-41C0-8D07-FBE9B03B6A3B}|GalaxyApp.Core\\GalaxyApp.Core.csproj|solutionrelative:galaxyapp.core\\features\\products\\commands\\create\\createcommandvalidator\\createproductvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3442260-5CAF-41C0-8D07-FBE9B03B6A3B}|GalaxyApp.Core\\GalaxyApp.Core.csproj|c:\\users\\hhhh\\desktop\\galaxyapp.apis\\galaxyapp.apis\\galaxyapp.core\\features\\products\\queries\\handlers\\getallproducthandlerdto\\getallproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3442260-5CAF-41C0-8D07-FBE9B03B6A3B}|GalaxyApp.Core\\GalaxyApp.Core.csproj|solutionrelative:galaxyapp.core\\features\\products\\queries\\handlers\\getallproducthandlerdto\\getallproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D3442260-5CAF-41C0-8D07-FBE9B03B6A3B}|GalaxyApp.Core\\GalaxyApp.Core.csproj|c:\\users\\hhhh\\desktop\\galaxyapp.apis\\galaxyapp.apis\\galaxyapp.core\\middleware\\errorhandlermiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3442260-5CAF-41C0-8D07-FBE9B03B6A3B}|GalaxyApp.Core\\GalaxyApp.Core.csproj|solutionrelative:galaxyapp.core\\middleware\\errorhandlermiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3442260-5CAF-41C0-8D07-FBE9B03B6A3B}|GalaxyApp.Core\\GalaxyApp.Core.csproj|c:\\users\\hhhh\\desktop\\galaxyapp.apis\\galaxyapp.apis\\galaxyapp.core\\features\\products\\commands\\create\\createcommandhandler\\createproducthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3442260-5CAF-41C0-8D07-FBE9B03B6A3B}|GalaxyApp.Core\\GalaxyApp.Core.csproj|solutionrelative:galaxyapp.core\\features\\products\\commands\\create\\createcommandhandler\\createproducthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3442260-5CAF-41C0-8D07-FBE9B03B6A3B}|GalaxyApp.Core\\GalaxyApp.Core.csproj|c:\\users\\hhhh\\desktop\\galaxyapp.apis\\galaxyapp.apis\\galaxyapp.core\\features\\products\\queries\\handlers\\getallwarehouseproducthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3442260-5CAF-41C0-8D07-FBE9B03B6A3B}|GalaxyApp.Core\\GalaxyApp.Core.csproj|solutionrelative:galaxyapp.core\\features\\products\\queries\\handlers\\getallwarehouseproducthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D3442260-5CAF-41C0-8D07-FBE9B03B6A3B}|GalaxyApp.Core\\GalaxyApp.Core.csproj|c:\\users\\hhhh\\desktop\\galaxyapp.apis\\galaxyapp.apis\\galaxyapp.core\\features\\products\\queries\\handlers\\getallproducthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D3442260-5CAF-41C0-8D07-FBE9B03B6A3B}|GalaxyApp.Core\\GalaxyApp.Core.csproj|solutionrelative:galaxyapp.core\\features\\products\\queries\\handlers\\getallproducthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{D3442260-5CAF-41C0-8D07-FBE9B03B6A3B}|GalaxyApp.Core\\GalaxyApp.Core.csproj|c:\\users\\hhhh\\desktop\\galaxyapp.apis\\galaxyapp.apis\\galaxyapp.core\\features\\products\\queries\\handlers\\getallshopproducthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3442260-5CAF-41C0-8D07-FBE9B03B6A3B}|GalaxyApp.Core\\GalaxyApp.Core.csproj|solutionrelative:galaxyapp.core\\features\\products\\queries\\handlers\\getallshopproducthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D3442260-5CAF-41C0-8D07-FBE9B03B6A3B}|GalaxyApp.Core\\GalaxyApp.Core.csproj|c:\\users\\hhhh\\desktop\\galaxyapp.apis\\galaxyapp.apis\\galaxyapp.core\\mapping\\productquerymapping\\productprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D3442260-5CAF-41C0-8D07-FBE9B03B6A3B}|GalaxyApp.Core\\GalaxyApp.Core.csproj|solutionrelative:galaxyapp.core\\mapping\\productquerymapping\\productprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3442260-5CAF-41C0-8D07-FBE9B03B6A3B}|GalaxyApp.Core\\GalaxyApp.Core.csproj|c:\\users\\hhhh\\desktop\\galaxyapp.apis\\galaxyapp.apis\\galaxyapp.core\\features\\products\\queries\\handlers\\getallproducthandlerdto\\getallproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3442260-5CAF-41C0-8D07-FBE9B03B6A3B}|GalaxyApp.Core\\GalaxyApp.Core.csproj|solutionrelative:galaxyapp.core\\features\\products\\queries\\handlers\\getallproducthandlerdto\\getallproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,90 +58,158 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BaseController.cs",
-              "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\GalaxyApp.APIs\\Controllers\\BaseController.cs",
-              "RelativeDocumentMoniker": "GalaxyApp.APIs\\Controllers\\BaseController.cs",
-              "ToolTip": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\GalaxyApp.APIs\\Controllers\\BaseController.cs",
-              "RelativeToolTip": "GalaxyApp.APIs\\Controllers\\BaseController.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAABsAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T19:40:44.97Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "GetAllWarehouseProductHandler.cs",
               "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\GalaxyApp.Core\\Features\\Products\\Queries\\Handlers\\GetAllWarehouseProductHandler.cs",
               "RelativeDocumentMoniker": "GalaxyApp.Core\\Features\\Products\\Queries\\Handlers\\GetAllWarehouseProductHandler.cs",
               "ToolTip": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\GalaxyApp.Core\\Features\\Products\\Queries\\Handlers\\GetAllWarehouseProductHandler.cs",
               "RelativeToolTip": "GalaxyApp.Core\\Features\\Products\\Queries\\Handlers\\GetAllWarehouseProductHandler.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACAAAABAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-17T19:13:27.643Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ProductController.cs",
               "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\GalaxyApp.APIs\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "GalaxyApp.APIs\\Controllers\\ProductController.cs",
               "ToolTip": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\GalaxyApp.APIs\\Controllers\\ProductController.cs",
               "RelativeToolTip": "GalaxyApp.APIs\\Controllers\\ProductController.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAowCcAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAADgvycAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-17T19:10:24.376Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ErrorHandlerMiddleWare.cs",
+              "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\GalaxyApp.Core\\MiddleWare\\ErrorHandlerMiddleWare.cs",
+              "RelativeDocumentMoniker": "GalaxyApp.Core\\MiddleWare\\ErrorHandlerMiddleWare.cs",
+              "ToolTip": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\GalaxyApp.Core\\MiddleWare\\ErrorHandlerMiddleWare.cs",
+              "RelativeToolTip": "GalaxyApp.Core\\MiddleWare\\ErrorHandlerMiddleWare.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAAAFQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T02:15:37.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\GalaxyApp.APIs\\Program.cs",
+              "RelativeDocumentMoniker": "GalaxyApp.APIs\\Program.cs",
+              "ToolTip": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\GalaxyApp.APIs\\Program.cs",
+              "RelativeToolTip": "GalaxyApp.APIs\\Program.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAAAEYAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T02:20:43.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ModuleCoreDependencies.cs",
+              "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\GalaxyApp.Core\\ModuleCoreDependencies.cs",
+              "RelativeDocumentMoniker": "GalaxyApp.Core\\ModuleCoreDependencies.cs",
+              "ToolTip": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\GalaxyApp.Core\\ModuleCoreDependencies.cs",
+              "RelativeToolTip": "GalaxyApp.Core\\ModuleCoreDependencies.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T02:05:59.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ValidationBehaviors.cs",
+              "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\GalaxyApp.Core\\ValidationBehaviors.cs",
+              "RelativeDocumentMoniker": "GalaxyApp.Core\\ValidationBehaviors.cs",
+              "ToolTip": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\GalaxyApp.Core\\ValidationBehaviors.cs*",
+              "RelativeToolTip": "GalaxyApp.Core\\ValidationBehaviors.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T01:52:39.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CreateProductValidator.cs",
+              "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\GalaxyApp.Core\\Features\\Products\\Commands\\Create\\CreateCommandValidator\\CreateProductValidator.cs",
+              "RelativeDocumentMoniker": "GalaxyApp.Core\\Features\\Products\\Commands\\Create\\CreateCommandValidator\\CreateProductValidator.cs",
+              "ToolTip": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\GalaxyApp.Core\\Features\\Products\\Commands\\Create\\CreateCommandValidator\\CreateProductValidator.cs",
+              "RelativeToolTip": "GalaxyApp.Core\\Features\\Products\\Commands\\Create\\CreateCommandValidator\\CreateProductValidator.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAYwAoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T01:22:16.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "CreateProductHandler.cs",
+              "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\GalaxyApp.Core\\Features\\Products\\Commands\\Create\\CreateCommandHandler\\CreateProductHandler.cs",
+              "RelativeDocumentMoniker": "GalaxyApp.Core\\Features\\Products\\Commands\\Create\\CreateCommandHandler\\CreateProductHandler.cs",
+              "ToolTip": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\GalaxyApp.Core\\Features\\Products\\Commands\\Create\\CreateCommandHandler\\CreateProductHandler.cs",
+              "RelativeToolTip": "GalaxyApp.Core\\Features\\Products\\Commands\\Create\\CreateCommandHandler\\CreateProductHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T01:19:27.319Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "ProductProfile.cs",
               "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\GalaxyApp.Core\\Mapping\\ProductQueryMApping\\ProductProfile.cs",
               "RelativeDocumentMoniker": "GalaxyApp.Core\\Mapping\\ProductQueryMApping\\ProductProfile.cs",
               "ToolTip": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\GalaxyApp.Core\\Mapping\\ProductQueryMApping\\ProductProfile.cs",
               "RelativeToolTip": "GalaxyApp.Core\\Mapping\\ProductQueryMApping\\ProductProfile.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T19:06:23.115Z"
+              "WhenOpened": "2025-02-17T19:06:23.115Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "GetAllShopProductHandler.cs",
               "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\GalaxyApp.Core\\Features\\Products\\Queries\\Handlers\\GetAllShopProductHandler.cs",
               "RelativeDocumentMoniker": "GalaxyApp.Core\\Features\\Products\\Queries\\Handlers\\GetAllShopProductHandler.cs",
               "ToolTip": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\GalaxyApp.Core\\Features\\Products\\Queries\\Handlers\\GetAllShopProductHandler.cs",
               "RelativeToolTip": "GalaxyApp.Core\\Features\\Products\\Queries\\Handlers\\GetAllShopProductHandler.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T19:02:53.8Z"
+              "WhenOpened": "2025-02-17T19:02:53.8Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "GetAllProductHandler.cs",
               "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\GalaxyApp.Core\\Features\\Products\\Queries\\Handlers\\GetAllProductHandler.cs",
               "RelativeDocumentMoniker": "GalaxyApp.Core\\Features\\Products\\Queries\\Handlers\\GetAllProductHandler.cs",
               "ToolTip": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\GalaxyApp.Core\\Features\\Products\\Queries\\Handlers\\GetAllProductHandler.cs",
               "RelativeToolTip": "GalaxyApp.Core\\Features\\Products\\Queries\\Handlers\\GetAllProductHandler.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAAABAAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T18:58:53.271Z"
+              "WhenOpened": "2025-02-17T18:58:53.271Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "GetAllProductDto.cs",
               "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\GalaxyApp.Core\\Features\\Products\\Queries\\Handlers\\GetAllProductHandlerDto\\GetAllProductDto.cs",
               "RelativeDocumentMoniker": "GalaxyApp.Core\\Features\\Products\\Queries\\Handlers\\GetAllProductHandlerDto\\GetAllProductDto.cs",
@@ -129,7 +217,8 @@
               "RelativeToolTip": "GalaxyApp.Core\\Features\\Products\\Queries\\Handlers\\GetAllProductHandlerDto\\GetAllProductDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T18:58:52.457Z"
+              "WhenOpened": "2025-02-17T18:58:52.457Z",
+              "EditorCaption": ""
             }
           ]
         }

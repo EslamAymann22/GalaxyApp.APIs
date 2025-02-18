@@ -325,3 +325,5 @@ C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.APIs\GalaxyApp.APIs\obj\Debug\net
 C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.APIs\GalaxyApp.APIs\obj\Debug\net8.0\ref\GalaxyApp.APIs.dll
 C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.APIs\GalaxyApp.APIs\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.APIs\GalaxyApp.APIs\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.APIs\GalaxyApp.APIs\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.APIs\GalaxyApp.APIs\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll

@@ -1,17 +1,11 @@
-﻿using GalaxyApp.Core.Features.Products.Queries.Handlers;
+﻿using AutoMapper;
 using GalaxyApp.Core.BaseResponse;
-using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using GalaxyApp.Service.Interfaces.ProductInterface;
-using AutoMapper;
 using GalaxyApp.Data.Entities;
+using GalaxyApp.Service.Interfaces.ProductInterface;
+using MediatR;
 using System.Net;
 
-namespace GalaxyApp.Core.Features.Products.Commands.CreateCommand
+namespace GalaxyApp.Core.Features.Products.Commands.Create.CreateCommandHandler
 {
 
     public record CreateProductModel : IRequest<BaseResponse<CreateProductModel>>
@@ -31,21 +25,21 @@ namespace GalaxyApp.Core.Features.Products.Commands.CreateCommand
         private readonly IProductService _productService;
         private readonly IMapper _mapper;
 
-        public CreateProductHandler(IProductService productService 
-                                    ,IMapper mapper)
+        public CreateProductHandler(IProductService productService
+                                    , IMapper mapper)
         {
-            this._productService = productService;
-            this._mapper = mapper;
+            _productService = productService;
+            _mapper = mapper;
         }
 
         public async Task<BaseResponse<CreateProductModel>> Handle(CreateProductModel request, CancellationToken cancellationToken)
         {
             var product = _mapper.Map<Product>(request);
 
-            var Result =await _productService.AddAsync(product);
+            var Result = await _productService.AddAsync(product);
 
             return Result
-                ?Created(request)
+                ? Created(request)
                 : Failed<CreateProductModel>(HttpStatusCode.Conflict);
         }
     }

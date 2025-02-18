@@ -3,11 +3,6 @@ using GalaxyApp.Core.BaseResponse;
 using GalaxyApp.Core.Features.Products.Queries.Handlers.GetAllProductHandlerDto;
 using GalaxyApp.Service.Interfaces.ProductInterface;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GalaxyApp.Core.Features.Products.Queries.Handlers
 {

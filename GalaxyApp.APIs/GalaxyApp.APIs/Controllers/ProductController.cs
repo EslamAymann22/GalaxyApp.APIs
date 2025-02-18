@@ -1,9 +1,9 @@
-﻿using GalaxyApp.Core.Features.Products.Queries.Handlers;
-using GalaxyApp.Core.BaseResponse;
+﻿using GalaxyApp.Core.BaseResponse;
+using GalaxyApp.Core.Features.Products.Commands.Create.CreateCommandHandler;
+using GalaxyApp.Core.Features.Products.Queries.Handlers;
+using GalaxyApp.Core.Features.Products.Queries.Handlers.GetAllProductHandlerDto;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using GalaxyApp.Core.Features.Products.Commands.CreateCommand;
-using GalaxyApp.Core.Features.Products.Queries.Handlers.GetAllProductHandlerDto;
 
 namespace GalaxyApp.APIs.Controllers
 {

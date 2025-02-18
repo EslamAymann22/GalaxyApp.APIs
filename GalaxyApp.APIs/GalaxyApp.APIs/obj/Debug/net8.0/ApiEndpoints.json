@@ -29,13 +29,13 @@
     "Parameters": [
       {
         "Name": "model",
-        "Type": "GalaxyApp.Core.Features.Products.Commands.CreateCommand.CreateProductModel",
+        "Type": "GalaxyApp.Core.Features.Products.Commands.Create.CreateCommandHandler.CreateProductModel",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "GalaxyApp.Core.BaseResponse.BaseResponse\u00601[[GalaxyApp.Core.Features.Products.Commands.CreateCommand.CreateProductModel, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "GalaxyApp.Core.BaseResponse.BaseResponse\u00601[[GalaxyApp.Core.Features.Products.Commands.Create.CreateCommandHandler.CreateProductModel, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

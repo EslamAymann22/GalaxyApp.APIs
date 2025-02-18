@@ -1,10 +1,11 @@
 
+using GalaxyApp.Core;
+using GalaxyApp.Core.MiddleWare;
 using GalaxyApp.Data.Entities.Identity;
+using GalaxyApp.Infrastructure;
 using GalaxyApp.Infrastructure.DbContextData;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using GalaxyApp.Infrastructure;
-using GalaxyApp.Core;
 
 
 namespace GalaxyApp.APIs
@@ -66,6 +67,8 @@ namespace GalaxyApp.APIs
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
+            app.UseMiddleware<ErrorHandlerMiddleware>();
 
             app.UseHttpsRedirection();
 
