@@ -20,24 +20,24 @@ namespace GalaxyApp.APIs.Controllers
         [HttpGet]
         public async Task<ActionResult<BaseResponse<List<GetAllProductDto>>>> GetAllProducts()
         {
-            return await _mediator.Send(new GetAllProductModel());
+            return NewOk(await _mediator.Send(new GetAllProductModel()));
         }
 
         [HttpGet("Shop")]
         public async Task<ActionResult<BaseResponse<List<GetAllShopProductDto>>>> GetAllShopProducts()
         {
-            return await _mediator.Send(new GetAllShopProductModel());
+            return NewOk(await _mediator.Send(new GetAllShopProductModel()));
         }
         [HttpGet("Warehouse")]
         public async Task<ActionResult<BaseResponse<List<GetAllWarehouseProductDto>>>> GetAllWarehouseProducts()
         {
-            return await _mediator.Send(new GetAllWarehouseProductModel());
+            return NewOk(await _mediator.Send(new GetAllWarehouseProductModel()));
         }
 
         [HttpPost]
         public async Task<ActionResult<BaseResponse<CreateProductModel>>> CreateProduct([FromBody] CreateProductModel model)
         {
-            return await _mediator.Send(model);
+            return NewOk(await _mediator.Send(model));
         }
 
 

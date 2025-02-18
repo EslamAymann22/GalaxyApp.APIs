@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{345F484A-C899-4FE8-BDF9-3E326338FD6A}|GalaxyApp.APIs\\GalaxyApp.APIs.csproj|c:\\users\\hhhh\\desktop\\galaxyapp.apis\\galaxyapp.apis\\galaxyapp.apis\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{345F484A-C899-4FE8-BDF9-3E326338FD6A}|GalaxyApp.APIs\\GalaxyApp.APIs.csproj|solutionrelative:galaxyapp.apis\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{345F484A-C899-4FE8-BDF9-3E326338FD6A}|GalaxyApp.APIs\\GalaxyApp.APIs.csproj|c:\\users\\hhhh\\desktop\\galaxyapp.apis\\galaxyapp.apis\\galaxyapp.apis\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{345F484A-C899-4FE8-BDF9-3E326338FD6A}|GalaxyApp.APIs\\GalaxyApp.APIs.csproj|solutionrelative:galaxyapp.apis\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D3442260-5CAF-41C0-8D07-FBE9B03B6A3B}|GalaxyApp.Core\\GalaxyApp.Core.csproj|c:\\users\\hhhh\\desktop\\galaxyapp.apis\\galaxyapp.apis\\galaxyapp.core\\features\\products\\queries\\handlers\\getallwarehouseproducthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D3442260-5CAF-41C0-8D07-FBE9B03B6A3B}|GalaxyApp.Core\\GalaxyApp.Core.csproj|solutionrelative:galaxyapp.core\\features\\products\\queries\\handlers\\getallwarehouseproducthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{345F484A-C899-4FE8-BDF9-3E326338FD6A}|GalaxyApp.APIs\\GalaxyApp.APIs.csproj|c:\\users\\hhhh\\desktop\\galaxyapp.apis\\galaxyapp.apis\\galaxyapp.apis\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{345F484A-C899-4FE8-BDF9-3E326338FD6A}|GalaxyApp.APIs\\GalaxyApp.APIs.csproj|solutionrelative:galaxyapp.apis\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D3442260-5CAF-41C0-8D07-FBE9B03B6A3B}|GalaxyApp.Core\\GalaxyApp.Core.csproj|c:\\users\\hhhh\\desktop\\galaxyapp.apis\\galaxyapp.apis\\galaxyapp.core\\features\\products\\queries\\handlers\\getallshopproducthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,8 +38,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BaseController.cs",
+              "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\GalaxyApp.APIs\\Controllers\\BaseController.cs",
+              "RelativeDocumentMoniker": "GalaxyApp.APIs\\Controllers\\BaseController.cs",
+              "ToolTip": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\GalaxyApp.APIs\\Controllers\\BaseController.cs",
+              "RelativeToolTip": "GalaxyApp.APIs\\Controllers\\BaseController.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAABsAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-17T19:40:44.97Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -55,20 +72,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "ProductController.cs",
               "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\GalaxyApp.APIs\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "GalaxyApp.APIs\\Controllers\\ProductController.cs",
               "ToolTip": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\GalaxyApp.APIs\\Controllers\\ProductController.cs",
               "RelativeToolTip": "GalaxyApp.APIs\\Controllers\\ProductController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACIAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowCcAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-17T19:10:24.376Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "ProductProfile.cs",
               "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\GalaxyApp.Core\\Mapping\\ProductQueryMApping\\ProductProfile.cs",
               "RelativeDocumentMoniker": "GalaxyApp.Core\\Mapping\\ProductQueryMApping\\ProductProfile.cs",
@@ -76,12 +93,11 @@
               "RelativeToolTip": "GalaxyApp.Core\\Mapping\\ProductQueryMApping\\ProductProfile.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T19:06:23.115Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-17T19:06:23.115Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "GetAllShopProductHandler.cs",
               "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\GalaxyApp.Core\\Features\\Products\\Queries\\Handlers\\GetAllShopProductHandler.cs",
               "RelativeDocumentMoniker": "GalaxyApp.Core\\Features\\Products\\Queries\\Handlers\\GetAllShopProductHandler.cs",
@@ -89,12 +105,11 @@
               "RelativeToolTip": "GalaxyApp.Core\\Features\\Products\\Queries\\Handlers\\GetAllShopProductHandler.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T19:02:53.8Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-17T19:02:53.8Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "GetAllProductHandler.cs",
               "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\GalaxyApp.Core\\Features\\Products\\Queries\\Handlers\\GetAllProductHandler.cs",
               "RelativeDocumentMoniker": "GalaxyApp.Core\\Features\\Products\\Queries\\Handlers\\GetAllProductHandler.cs",
@@ -102,12 +117,11 @@
               "RelativeToolTip": "GalaxyApp.Core\\Features\\Products\\Queries\\Handlers\\GetAllProductHandler.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAAABAAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T18:58:53.271Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-17T18:58:53.271Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "GetAllProductDto.cs",
               "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\GalaxyApp.Core\\Features\\Products\\Queries\\Handlers\\GetAllProductHandlerDto\\GetAllProductDto.cs",
               "RelativeDocumentMoniker": "GalaxyApp.Core\\Features\\Products\\Queries\\Handlers\\GetAllProductHandlerDto\\GetAllProductDto.cs",
@@ -115,8 +129,7 @@
               "RelativeToolTip": "GalaxyApp.Core\\Features\\Products\\Queries\\Handlers\\GetAllProductHandlerDto\\GetAllProductDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T18:58:52.457Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-17T18:58:52.457Z"
             }
           ]
         }
