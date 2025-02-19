@@ -14,6 +14,7 @@ namespace GalaxyApp.Core.Mapping.ProductCommandMapping
                 .ForMember(dest => dest.WarehouseQuantity, opt => opt.MapFrom(src => src.Quantity));
 
             CreateMap<UpdateProductModel, Product>();
+            CreateMap<Product, Product>();
         }
 
     }

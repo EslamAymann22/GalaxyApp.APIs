@@ -43,26 +43,15 @@ namespace GalaxyApp.Core.Features.Products.Commands.Update.UpdateCommandHandler
 
             if (Result == HttpStatusCode.OK)
             {
-                var SearchProd = await _productService.GetByIdAsync(product.Id);
+                var UpdatedProduct = await _productService.GetByIdAsync(product.Id);
 
-                SearchProd.Name = product.Name;
-                SearchProd.Color = product.Color;
-                SearchProd.Discount = product.Discount;
-                SearchProd.Evaluation = product.Evaluation;
-                SearchProd.PurchasingPrice = product.PurchasingPrice;
-                SearchProd.sellingPrice = product.sellingPrice;
-                SearchProd.ImageFileName = product.ImageFileName;
-                SearchProd.ShopQuantity = product.ShopQuantity;
-                SearchProd.WarehouseQuantity = product.WarehouseQuantity;
+                _mapper.Map(product, UpdatedProduct); // put "product" Data in "UpdatedProduct"
 
-                _productService.Update(SearchProd);
+                _productService.Update(UpdatedProduct);
                 return Updated(request);
             }
 
             return Failed<UpdateProductModel>(Result);
-
-
-            //return Result ? Updated(request) : Failed<UpdateProductModel>(System.Net.HttpStatusCode.BadRequest);
         }
     }
 }
