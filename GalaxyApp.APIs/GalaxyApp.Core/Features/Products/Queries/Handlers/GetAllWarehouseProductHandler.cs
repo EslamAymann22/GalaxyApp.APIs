@@ -1,16 +1,17 @@
 ﻿using AutoMapper;
-using GalaxyApp.Core.BaseResponse;
 using GalaxyApp.Core.Features.Products.Queries.Handlers.GetAllProductHandlerDto;
+using GalaxyApp.Core.ResponseBase.GeneralResponse;
+using GalaxyApp.Core.ResponseBase.Paginations;
 using GalaxyApp.Service.Interfaces.ProductInterface;
 using MediatR;
 
 namespace GalaxyApp.Core.Features.Products.Queries.Handlers
 {
-    public record GetAllWarehouseProductModel : IRequest<BaseResponse<List<GetAllWarehouseProductDto>>>;
+    public class GetAllWarehouseProductModel : PaginationParams, IRequest<BaseResponse<PaginatedResponse<GetAllWarehouseProductDto>>>;
 
     public class GetAllWarehouseProductHandler : BaseResponseHandler,
 
-        IRequestHandler<GetAllWarehouseProductModel, BaseResponse<List<GetAllWarehouseProductDto>>>
+        IRequestHandler<GetAllWarehouseProductModel, BaseResponse<PaginatedResponse<GetAllWarehouseProductDto>>>
     {
         private readonly IProductService _productService;
         private readonly IMapper _mapper;
@@ -22,12 +23,14 @@ namespace GalaxyApp.Core.Features.Products.Queries.Handlers
             this._mapper = mapper;
         }
 
-        public async Task<BaseResponse<List<GetAllWarehouseProductDto>>> Handle(GetAllWarehouseProductModel request, CancellationToken cancellationToken)
+        public async Task<BaseResponse<PaginatedResponse<GetAllWarehouseProductDto>>> Handle(GetAllWarehouseProductModel request, CancellationToken cancellationToken)
         {
-            var ProductList = await _productService.GetAllAsync();
-            var MappedProduct = _mapper.Map<List<GetAllWarehouseProductDto>>(ProductList);
+            var QueryableDate = _productService.GetQueryableNoTracking();
+            QueryableDate = _productService.ApplyOrderByAndSearchFilter
+                (QueryableDate, request.OrderFilter, request.SearchFilter);
+            var QueryableList = _mapper.ProjectTo<GetAllWarehouseProductDto>(QueryableDate);
 
-            return Success(MappedProduct);
+            return Success(await QueryableList.ToPaginatedListAsync(request.PageNumber, request.PageSize));
         }
     }
 

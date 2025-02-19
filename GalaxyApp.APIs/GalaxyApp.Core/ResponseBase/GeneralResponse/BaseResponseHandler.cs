@@ -1,6 +1,6 @@
 ﻿using System.Net;
 
-namespace GalaxyApp.Core.BaseResponse
+namespace GalaxyApp.Core.ResponseBase.GeneralResponse
 {
     public class BaseResponseHandler
     {

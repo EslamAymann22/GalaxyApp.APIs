@@ -1,16 +1,17 @@
 ﻿using AutoMapper;
-using GalaxyApp.Core.BaseResponse;
 using GalaxyApp.Core.Features.Products.Queries.Handlers.GetAllProductHandlerDto;
+using GalaxyApp.Core.ResponseBase.GeneralResponse;
+using GalaxyApp.Core.ResponseBase.Paginations;
 using GalaxyApp.Service.Interfaces.ProductInterface;
 using MediatR;
 
 namespace GalaxyApp.Core.Features.Products.Queries.Handlers
 {
-    public record GetAllShopProductModel : IRequest<BaseResponse<List<GetAllShopProductDto>>>;
+    public class GetAllShopProductModel : PaginationParams, IRequest<BaseResponse<PaginatedResponse<GetAllShopProductDto>>>;
 
     public class GetAllShopProductHandler : BaseResponseHandler,
 
-        IRequestHandler<GetAllShopProductModel, BaseResponse<List<GetAllShopProductDto>>>
+        IRequestHandler<GetAllShopProductModel, BaseResponse<PaginatedResponse<GetAllShopProductDto>>>
     {
         private readonly IProductService _productService;
         private readonly IMapper _mapper;
@@ -22,12 +23,14 @@ namespace GalaxyApp.Core.Features.Products.Queries.Handlers
             this._mapper = mapper;
         }
 
-        public async Task<BaseResponse<List<GetAllShopProductDto>>> Handle(GetAllShopProductModel request, CancellationToken cancellationToken)
+        public async Task<BaseResponse<PaginatedResponse<GetAllShopProductDto>>> Handle(GetAllShopProductModel request, CancellationToken cancellationToken)
         {
-            var ProductList = await _productService.GetAllAsync();
-            var MappedProduct = _mapper.Map<List<GetAllShopProductDto>>(ProductList);
+            var QueryableDate = _productService.GetQueryableNoTracking();
+            QueryableDate = _productService.ApplyOrderByAndSearchFilter
+                (QueryableDate, request.OrderFilter, request.SearchFilter);
+            var QueryableList = _mapper.ProjectTo<GetAllShopProductDto>(QueryableDate);
 
-            return Success(MappedProduct);
+            return Success(await QueryableList.ToPaginatedListAsync(request.PageNumber, request.PageSize));
         }
     }
 

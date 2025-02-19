@@ -6,10 +6,31 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrderFilter",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SearchFilter",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": [
       {
-        "Type": "GalaxyApp.Core.BaseResponse.BaseResponse\u00601[[System.Collections.Generic.List\u00601[[GalaxyApp.Core.Features.Products.Queries.Handlers.GetAllProductHandlerDto.GetAllProductDto, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "GalaxyApp.Core.ResponseBase.Paginations.PaginatedResponse\u00601[[GalaxyApp.Core.Features.Products.Queries.Handlers.GetAllProductHandlerDto.GetAllProductDto, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -28,14 +49,39 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "model",
-        "Type": "GalaxyApp.Core.Features.Products.Commands.Create.CreateCommandHandler.CreateProductModel",
-        "IsRequired": true
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Color",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Quantity",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Evaluation",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PurchasingPrice",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "sellingPrice",
+        "Type": "System.Decimal",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "GalaxyApp.Core.BaseResponse.BaseResponse\u00601[[GalaxyApp.Core.Features.Products.Commands.Create.CreateCommandHandler.CreateProductModel, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "GalaxyApp.Core.ResponseBase.GeneralResponse.BaseResponse\u00601[[GalaxyApp.Core.Features.Products.Commands.Create.CreateCommandHandler.CreateProductModel, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -54,14 +100,59 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "model",
-        "Type": "GalaxyApp.Core.Features.Products.Commands.Update.UpdateCommandHandler.UpdateProductModel",
-        "IsRequired": true
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Color",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImageFileName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Evaluation",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PurchasingPrice",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "sellingPrice",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "Discount",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "WarehouseQuantity",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ShopQuantity",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "GalaxyApp.Core.BaseResponse.BaseResponse\u00601[[GalaxyApp.Core.Features.Products.Commands.Update.UpdateCommandHandler.UpdateProductModel, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "GalaxyApp.Core.ResponseBase.GeneralResponse.BaseResponse\u00601[[GalaxyApp.Core.Features.Products.Commands.Update.UpdateCommandHandler.UpdateProductModel, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -80,14 +171,14 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "model",
-        "Type": "GalaxyApp.Core.Features.Products.Commands.Delete.DeleteProductModel",
-        "IsRequired": true
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "GalaxyApp.Core.BaseResponse.BaseResponse\u00601[[GalaxyApp.Core.Features.Products.Commands.Delete.DeleteProductHandler, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "GalaxyApp.Core.ResponseBase.GeneralResponse.BaseResponse\u00601[[GalaxyApp.Core.Features.Products.Commands.Delete.DeleteProductHandler, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -104,10 +195,31 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrderFilter",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SearchFilter",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": [
       {
-        "Type": "GalaxyApp.Core.BaseResponse.BaseResponse\u00601[[System.Collections.Generic.List\u00601[[GalaxyApp.Core.Features.Products.Queries.Handlers.GetAllProductHandlerDto.GetAllShopProductDto, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "GalaxyApp.Core.ResponseBase.GeneralResponse.BaseResponse\u00601[[System.Collections.Generic.List\u00601[[GalaxyApp.Core.Features.Products.Queries.Handlers.GetAllProductHandlerDto.GetAllShopProductDto, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -124,10 +236,31 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrderFilter",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SearchFilter",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": [
       {
-        "Type": "GalaxyApp.Core.BaseResponse.BaseResponse\u00601[[System.Collections.Generic.List\u00601[[GalaxyApp.Core.Features.Products.Queries.Handlers.GetAllProductHandlerDto.GetAllWarehouseProductDto, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "GalaxyApp.Core.ResponseBase.GeneralResponse.BaseResponse\u00601[[System.Collections.Generic.List\u00601[[GalaxyApp.Core.Features.Products.Queries.Handlers.GetAllProductHandlerDto.GetAllWarehouseProductDto, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

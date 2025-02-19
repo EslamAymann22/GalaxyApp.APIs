@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using GalaxyApp.Core.BaseResponse;
+using GalaxyApp.Core.ResponseBase.GeneralResponse;
 using GalaxyApp.Data.Entities;
 using GalaxyApp.Service.Interfaces.ProductInterface;
 using MediatR;
@@ -45,7 +45,7 @@ namespace GalaxyApp.Core.Features.Products.Commands.Update.UpdateCommandHandler
             {
                 var UpdatedProduct = await _productService.GetByIdAsync(product.Id);
 
-                _mapper.Map(product, UpdatedProduct); // put "product" Data in "UpdatedProduct"
+                _mapper.Map(product, UpdatedProduct); // put "product" PaginatedData in "UpdatedProduct"
 
                 _productService.Update(UpdatedProduct);
                 return Updated(request);

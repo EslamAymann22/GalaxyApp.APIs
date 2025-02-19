@@ -38,5 +38,7 @@ namespace GalaxyApp.Infrastructure.Repositories.Implement
             _DbContext.SaveChanges();
         }
 
+        public IQueryable<Product> GetQueryableNoTracking()
+        => _DbContext.products.AsNoTracking().AsQueryable();
     }
 }

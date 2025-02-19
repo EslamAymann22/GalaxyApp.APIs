@@ -17,6 +17,7 @@ namespace GalaxyApp.Core.Mapping.ProductQueryMapping
             CreateMap<Product, GetAllWarehouseProductDto>()
                .ForMember(dest => dest.Quantity, opt => opt.MapFrom(src => src.WarehouseQuantity));
 
+
         }
 
     }

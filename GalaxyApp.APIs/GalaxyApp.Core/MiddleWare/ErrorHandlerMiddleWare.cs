@@ -1,4 +1,4 @@
-﻿using GalaxyApp.Core.BaseResponse;
+﻿using GalaxyApp.Core.ResponseBase.GeneralResponse;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;

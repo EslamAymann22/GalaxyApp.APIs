@@ -1,7 +1,5 @@
-﻿using Azure;
-using GalaxyApp.Core.BaseResponse;
+﻿using GalaxyApp.Core.ResponseBase.GeneralResponse;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
@@ -17,7 +15,7 @@ namespace GalaxyApp.APIs.Controllers
 
 
 
-        public ObjectResult NewOk<T>(BaseResponse<T> response)
+        public ObjectResult BaseOk<T>(BaseResponse<T> response)
         {
             return (object)response.Status switch
             {

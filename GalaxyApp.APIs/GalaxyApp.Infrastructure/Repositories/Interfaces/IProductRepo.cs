@@ -10,5 +10,7 @@ namespace GalaxyApp.Infrastructure.Repositories.Interfaces
         Task AddAsync(Product product);
         void Update(Product product);
         void Delete(Product product);
+        IQueryable<Product> GetQueryableNoTracking();
+
     }
 }

@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using GalaxyApp.Core.BaseResponse;
 using GalaxyApp.Core.Features.Products.Queries.Handlers.GetAllProductHandlerDto;
+using GalaxyApp.Core.ResponseBase.GeneralResponse;
 using GalaxyApp.Service.Interfaces.ProductInterface;
 using MediatR;
 

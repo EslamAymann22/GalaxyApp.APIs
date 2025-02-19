@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using GalaxyApp.Core.BaseResponse;
+using GalaxyApp.Core.ResponseBase.GeneralResponse;
 using GalaxyApp.Data.Entities;
 using GalaxyApp.Service.Interfaces.ProductInterface;
 using MediatR;

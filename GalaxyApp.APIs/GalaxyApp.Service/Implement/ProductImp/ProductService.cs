@@ -35,6 +35,8 @@ namespace GalaxyApp.Service.Implement.ProductImp
         public async Task<Product> GetByIdAsync(int Id)
         => await _productRepo.GetByIdAsync(Id);
 
+        public IQueryable<Product> GetQueryableNoTracking()
+        => _productRepo.GetQueryableNoTracking();
         public async Task<HttpStatusCode> CheckProductUpdate(Product product)
         {
             var SearchProd = await GetByIdAsync(product.Id);
@@ -63,5 +65,33 @@ namespace GalaxyApp.Service.Implement.ProductImp
 
         public void Delete(Product product)
         => _productRepo.Delete(product);
+
+        public IQueryable<Product> ApplyOrderByAndSearchFilter(IQueryable<Product> Data, string OrderBy, string Search)
+        {
+            if (Search != null)
+            {
+                Data = Data.Where(X => X.Name.ToLower().Contains(Search.ToLower())
+                                || X.Color.ToLower().Contains(Search.ToLower()));
+            }
+            if (OrderBy != null)
+            {
+                Data = OrderBy.ToLower() switch
+                {
+                    "name" => Data.OrderBy(x => x.Name),
+                    "namedes" => Data.OrderByDescending(x => x.Name),
+                    "price" => Data.OrderBy(x => x.sellingPrice),
+                    "pricedes" => Data.OrderByDescending(x => x.sellingPrice),
+                    "evaluation" => Data.OrderBy(x => x.Evaluation),
+                    "evaluationdes" => Data.OrderByDescending(x => x.Evaluation),
+                    "discount" => Data.OrderBy(x => x.Discount),
+                    "discountdes" => Data.OrderByDescending(x => x.Discount),
+                    "quantity" => Data.OrderBy(x => x.ShopQuantity + x.WarehouseQuantity),
+                    "quantitydes" => Data.OrderByDescending(x => x.ShopQuantity + x.WarehouseQuantity),
+                    _ => Data.OrderBy(x => x.Id)
+                };
+            }
+
+            return Data;
+        }
     }
 }
