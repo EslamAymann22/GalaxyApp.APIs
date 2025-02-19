@@ -59,18 +59,9 @@ namespace GalaxyApp.Service.Implement.ProductImp
 
             _productRepo.Update(product);
 
-
-            //SearchProd.Id = product.Id;
-            //SearchProd.Name = product.Name;
-            //SearchProd.Color = product.Color;
-            //SearchProd.Discount = product.Discount;
-            //SearchProd.Evaluation = product.Evaluation;
-            //SearchProd.PurchasingPrice = product.PurchasingPrice;
-            //SearchProd.sellingPrice = product.sellingPrice;
-            //SearchProd.ImageFileName = product.ImageFileName;
-            //SearchProd.ShopQuantity = product.ShopQuantity;
-            //SearchProd.WarehouseQuantity = product.WarehouseQuantity;
-
         }
+
+        public void Delete(Product product)
+        => _productRepo.Delete(product);
     }
 }

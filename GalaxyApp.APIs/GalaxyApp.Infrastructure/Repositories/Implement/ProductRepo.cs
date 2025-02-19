@@ -31,5 +31,12 @@ namespace GalaxyApp.Infrastructure.Repositories.Implement
             _DbContext.products.Update(product);
             _DbContext.SaveChanges();
         }
+
+        public void Delete(Product product)
+        {
+            _DbContext.products.Remove(product);
+            _DbContext.SaveChanges();
+        }
+
     }
 }

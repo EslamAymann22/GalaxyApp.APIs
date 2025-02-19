@@ -1,5 +1,6 @@
 ﻿using GalaxyApp.Core.BaseResponse;
 using GalaxyApp.Core.Features.Products.Commands.Create.CreateCommandHandler;
+using GalaxyApp.Core.Features.Products.Commands.Delete;
 using GalaxyApp.Core.Features.Products.Commands.Update.UpdateCommandHandler;
 using GalaxyApp.Core.Features.Products.Queries.Handlers;
 using GalaxyApp.Core.Features.Products.Queries.Handlers.GetAllProductHandlerDto;
@@ -46,5 +47,12 @@ namespace GalaxyApp.APIs.Controllers
         {
             return NewOk(await _mediator.Send(model));
         }
+
+        [HttpDelete]
+        public async Task<ActionResult<BaseResponse<DeleteProductHandler>>> DeleteProduct([FromBody] DeleteProductModel model)
+        {
+            return NewOk(await _mediator.Send(model));
+        }
+
     }
 }

@@ -11,6 +11,7 @@ namespace GalaxyApp.Service.Interfaces.ProductInterface
 
         Task AddAsync(Product product);
         void Update(Product product);
+        void Delete(Product product);
 
         Task<HttpStatusCode> CheckProductUpdate(Product product);
 

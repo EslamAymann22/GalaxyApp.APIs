@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GalaxyApp.Service")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e7f9b53ac1c5fb654624efc34ab219f9ca6306f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+df72e6ee0b582204eba59a03956932e094e38af6")]
 [assembly: System.Reflection.AssemblyProductAttribute("GalaxyApp.Service")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GalaxyApp.Service")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
