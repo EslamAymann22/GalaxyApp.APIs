@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GalaxyApp.Service", "Galaxy
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GalaxyApp.Infrastructure", "GalaxyApp.Infrastructure\GalaxyApp.Infrastructure.csproj", "{A600A835-F2C7-4149-A8AE-0339A7102AC6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GalaxyApp.Share", "GalaxyApp.Share\GalaxyApp.Share.csproj", "{76A37DC2-749C-4CEC-AEF6-1A8840A26DEB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{A600A835-F2C7-4149-A8AE-0339A7102AC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A600A835-F2C7-4149-A8AE-0339A7102AC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A600A835-F2C7-4149-A8AE-0339A7102AC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76A37DC2-749C-4CEC-AEF6-1A8840A26DEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76A37DC2-749C-4CEC-AEF6-1A8840A26DEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76A37DC2-749C-4CEC-AEF6-1A8840A26DEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76A37DC2-749C-4CEC-AEF6-1A8840A26DEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

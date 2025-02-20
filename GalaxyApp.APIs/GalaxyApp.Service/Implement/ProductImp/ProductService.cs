@@ -1,4 +1,5 @@
-﻿using GalaxyApp.Data.Entities;
+﻿using GalaxyApp.Core.ResponseBase.Paginations;
+using GalaxyApp.Data.Entities;
 using GalaxyApp.Infrastructure.Repositories.Interfaces;
 using GalaxyApp.Service.Interfaces.ProductInterface;
 using System.Net;
@@ -66,7 +67,7 @@ namespace GalaxyApp.Service.Implement.ProductImp
         public void Delete(Product product)
         => _productRepo.Delete(product);
 
-        public IQueryable<Product> ApplyOrderByAndSearchFilter(IQueryable<Product> Data, string OrderBy, string Search)
+        public IQueryable<Product> ApplyOrderByAndSearchFilter(IQueryable<Product> Data, ProductOrderEnum? OrderBy, string? Search)
         {
             if (Search != null)
             {
@@ -75,18 +76,18 @@ namespace GalaxyApp.Service.Implement.ProductImp
             }
             if (OrderBy != null)
             {
-                Data = OrderBy.ToLower() switch
+                Data = OrderBy switch
                 {
-                    "name" => Data.OrderBy(x => x.Name),
-                    "namedes" => Data.OrderByDescending(x => x.Name),
-                    "price" => Data.OrderBy(x => x.sellingPrice),
-                    "pricedes" => Data.OrderByDescending(x => x.sellingPrice),
-                    "evaluation" => Data.OrderBy(x => x.Evaluation),
-                    "evaluationdes" => Data.OrderByDescending(x => x.Evaluation),
-                    "discount" => Data.OrderBy(x => x.Discount),
-                    "discountdes" => Data.OrderByDescending(x => x.Discount),
-                    "quantity" => Data.OrderBy(x => x.ShopQuantity + x.WarehouseQuantity),
-                    "quantitydes" => Data.OrderByDescending(x => x.ShopQuantity + x.WarehouseQuantity),
+                    ProductOrderEnum.Name => Data.OrderBy(x => x.Name),
+                    ProductOrderEnum.NameDes => Data.OrderByDescending(x => x.Name),
+                    ProductOrderEnum.Price => Data.OrderBy(x => x.sellingPrice),
+                    ProductOrderEnum.PriceDes => Data.OrderByDescending(x => x.sellingPrice),
+                    ProductOrderEnum.Evaluation => Data.OrderBy(x => x.Evaluation),
+                    ProductOrderEnum.EvaluationDes => Data.OrderByDescending(x => x.Evaluation),
+                    ProductOrderEnum.Discount => Data.OrderBy(x => x.Discount),
+                    ProductOrderEnum.DiscountDes => Data.OrderByDescending(x => x.Discount),
+                    ProductOrderEnum.Quantity => Data.OrderBy(x => x.ShopQuantity + x.WarehouseQuantity),
+                    ProductOrderEnum.QuantityDes => Data.OrderByDescending(x => x.ShopQuantity + x.WarehouseQuantity),
                     _ => Data.OrderBy(x => x.Id)
                 };
             }

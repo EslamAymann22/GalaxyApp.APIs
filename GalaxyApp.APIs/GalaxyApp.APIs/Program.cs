@@ -35,7 +35,6 @@ namespace GalaxyApp.APIs
                             .AddServicesDependencies()
                             .AddCoreDependencies();
 
-
             var app = builder.Build();
 
 

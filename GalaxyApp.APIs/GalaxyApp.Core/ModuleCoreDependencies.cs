@@ -21,6 +21,8 @@ namespace GalaxyApp.Core
 
             Service.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviors<,>));
 
+
+
             return Service;
 
         }

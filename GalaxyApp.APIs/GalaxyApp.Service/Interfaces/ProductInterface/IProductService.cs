@@ -1,4 +1,5 @@
-﻿using GalaxyApp.Data.Entities;
+﻿using GalaxyApp.Core.ResponseBase.Paginations;
+using GalaxyApp.Data.Entities;
 using System.Net;
 
 
@@ -13,7 +14,7 @@ namespace GalaxyApp.Service.Interfaces.ProductInterface
         Task AddAsync(Product product);
         void Update(Product product); void Delete(Product product);
         IQueryable<Product> GetQueryableNoTracking();
-        IQueryable<Product> ApplyOrderByAndSearchFilter(IQueryable<Product> Data, string OrderBy, string Search);
+        IQueryable<Product> ApplyOrderByAndSearchFilter(IQueryable<Product> Data, ProductOrderEnum? OrderBy, string? Search);
         Task<HttpStatusCode> CheckProductUpdate(Product product);
 
 

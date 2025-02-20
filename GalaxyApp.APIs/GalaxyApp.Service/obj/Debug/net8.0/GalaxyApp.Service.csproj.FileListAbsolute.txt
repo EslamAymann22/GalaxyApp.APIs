@@ -33,3 +33,5 @@ C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.APIs\GalaxyApp.Service\obj\Debug\
 C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.APIs\GalaxyApp.Service\obj\Debug\net8.0\refint\GalaxyApp.Service.dll
 C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.APIs\GalaxyApp.Service\obj\Debug\net8.0\GalaxyApp.Service.pdb
 C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.APIs\GalaxyApp.Service\obj\Debug\net8.0\ref\GalaxyApp.Service.dll
+C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.APIs\GalaxyApp.Service\bin\Debug\net8.0\GalaxyApp.Share.dll
+C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.APIs\GalaxyApp.Service\bin\Debug\net8.0\GalaxyApp.Share.pdb

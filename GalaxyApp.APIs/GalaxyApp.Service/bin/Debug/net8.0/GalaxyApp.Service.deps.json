@@ -9,7 +9,8 @@
       "GalaxyApp.Service/1.0.0": {
         "dependencies": {
           "GalaxyApp.Data": "1.0.0",
-          "GalaxyApp.Infrastructure": "1.0.0"
+          "GalaxyApp.Infrastructure": "1.0.0",
+          "GalaxyApp.Share": "1.0.0"
         },
         "runtime": {
           "GalaxyApp.Service.dll": {}
@@ -654,6 +655,14 @@
             "fileVersion": "1.0.0.0"
           }
         }
+      },
+      "GalaxyApp.Share/1.0.0": {
+        "runtime": {
+          "GalaxyApp.Share.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -1089,6 +1098,11 @@
       "sha512": ""
     },
     "GalaxyApp.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GalaxyApp.Share/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

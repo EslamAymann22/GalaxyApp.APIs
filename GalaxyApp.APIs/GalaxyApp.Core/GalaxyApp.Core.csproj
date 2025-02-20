@@ -9,6 +9,7 @@
   <ItemGroup>
     <ProjectReference Include="..\GalaxyApp.Data\GalaxyApp.Data.csproj" />
     <ProjectReference Include="..\GalaxyApp.Service\GalaxyApp.Service.csproj" />
+    <ProjectReference Include="..\GalaxyApp.Share\GalaxyApp.Share.csproj" />
   </ItemGroup>
 
   <ItemGroup>

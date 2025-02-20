@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\GalaxyApp.Core\GalaxyApp.Core.csproj" />
+    <ProjectReference Include="..\GalaxyApp.Share\GalaxyApp.Share.csproj" />
   </ItemGroup>
 
 </Project>

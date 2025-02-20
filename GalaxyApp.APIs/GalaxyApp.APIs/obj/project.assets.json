@@ -1792,6 +1792,7 @@
           "FluentValidation.DependencyInjectionExtensions": "11.11.0",
           "GalaxyApp.Data": "1.0.0",
           "GalaxyApp.Service": "1.0.0",
+          "GalaxyApp.Share": "1.0.0",
           "MediatR": "12.4.1",
           "Microsoft.AspNetCore.Http.Abstractions": "2.3.0"
         },
@@ -1834,13 +1835,24 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "GalaxyApp.Data": "1.0.0",
-          "GalaxyApp.Infrastructure": "1.0.0"
+          "GalaxyApp.Infrastructure": "1.0.0",
+          "GalaxyApp.Share": "1.0.0"
         },
         "compile": {
           "bin/placeholder/GalaxyApp.Service.dll": {}
         },
         "runtime": {
           "bin/placeholder/GalaxyApp.Service.dll": {}
+        }
+      },
+      "GalaxyApp.Share/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/GalaxyApp.Share.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GalaxyApp.Share.dll": {}
         }
       }
     }
@@ -4940,11 +4952,17 @@
       "type": "project",
       "path": "../GalaxyApp.Service/GalaxyApp.Service.csproj",
       "msbuildProject": "../GalaxyApp.Service/GalaxyApp.Service.csproj"
+    },
+    "GalaxyApp.Share/1.0.0": {
+      "type": "project",
+      "path": "../GalaxyApp.Share/GalaxyApp.Share.csproj",
+      "msbuildProject": "../GalaxyApp.Share/GalaxyApp.Share.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "GalaxyApp.Core >= 1.0.0",
+      "GalaxyApp.Share >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.13",
       "Swashbuckle.AspNetCore >= 6.6.2"
     ]
@@ -4983,6 +5001,9 @@
           "projectReferences": {
             "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\GalaxyApp.Core\\GalaxyApp.Core.csproj": {
               "projectPath": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\GalaxyApp.Core\\GalaxyApp.Core.csproj"
+            },
+            "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\GalaxyApp.Share\\GalaxyApp.Share.csproj": {
+              "projectPath": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\GalaxyApp.Share\\GalaxyApp.Share.csproj"
             }
           }
         }

@@ -7,12 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GalaxyApp.Data\GalaxyApp.Data.csproj" />
-    <ProjectReference Include="..\GalaxyApp.Infrastructure\GalaxyApp.Infrastructure.csproj" />
+    <Compile Remove="DTOs\**" />
+    <EmbeddedResource Remove="DTOs\**" />
+    <None Remove="DTOs\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DTOs\" />
+    <ProjectReference Include="..\GalaxyApp.Data\GalaxyApp.Data.csproj" />
+    <ProjectReference Include="..\GalaxyApp.Infrastructure\GalaxyApp.Infrastructure.csproj" />
+    <ProjectReference Include="..\GalaxyApp.Share\GalaxyApp.Share.csproj" />
   </ItemGroup>
 
 </Project>

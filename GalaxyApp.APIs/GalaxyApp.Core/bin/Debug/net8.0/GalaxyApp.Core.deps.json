@@ -13,6 +13,7 @@
           "FluentValidation.DependencyInjectionExtensions": "11.11.0",
           "GalaxyApp.Data": "1.0.0",
           "GalaxyApp.Service": "1.0.0",
+          "GalaxyApp.Share": "1.0.0",
           "MediatR": "12.4.1",
           "Microsoft.AspNetCore.Http.Abstractions": "2.3.0"
         },
@@ -745,10 +746,19 @@
       "GalaxyApp.Service/1.0.0": {
         "dependencies": {
           "GalaxyApp.Data": "1.0.0",
-          "GalaxyApp.Infrastructure": "1.0.0"
+          "GalaxyApp.Infrastructure": "1.0.0",
+          "GalaxyApp.Share": "1.0.0"
         },
         "runtime": {
           "GalaxyApp.Service.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "GalaxyApp.Share/1.0.0": {
+        "runtime": {
+          "GalaxyApp.Share.dll": {
             "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -1249,6 +1259,11 @@
       "sha512": ""
     },
     "GalaxyApp.Service/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GalaxyApp.Share/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
