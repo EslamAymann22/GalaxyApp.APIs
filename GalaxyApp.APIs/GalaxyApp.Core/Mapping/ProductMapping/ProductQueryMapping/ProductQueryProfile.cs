@@ -2,12 +2,12 @@
 using GalaxyApp.Core.Features.Products.Queries.Handlers.GetAllProductHandlerDto;
 using GalaxyApp.Data.Entities;
 
-namespace GalaxyApp.Core.Mapping.ProductQueryMapping
+namespace GalaxyApp.Core.Mapping.ProductMapping.ProductQueryMapping
 {
-    public class ProductProfile : Profile
+    public class ProductQueryProfile : Profile
     {
 
-        public ProductProfile()
+        public ProductQueryProfile()
         {
             CreateMap<Product, GetAllProductDto>();
 

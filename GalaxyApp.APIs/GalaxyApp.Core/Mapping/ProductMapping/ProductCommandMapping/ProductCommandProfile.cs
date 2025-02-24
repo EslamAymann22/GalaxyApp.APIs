@@ -3,11 +3,11 @@ using GalaxyApp.Core.Features.Products.Commands.Create.CreateCommandHandler;
 using GalaxyApp.Core.Features.Products.Commands.Update.UpdateCommandHandler;
 using GalaxyApp.Data.Entities;
 
-namespace GalaxyApp.Core.Mapping.ProductCommandMapping
+namespace GalaxyApp.Core.Mapping.ProductMapping.ProductCommandMapping
 {
-    public class ProductProfile : Profile
+    public class ProductCommandProfile : Profile
     {
-        public ProductProfile()
+        public ProductCommandProfile()
         {
 
             CreateMap<CreateProductModel, Product>()

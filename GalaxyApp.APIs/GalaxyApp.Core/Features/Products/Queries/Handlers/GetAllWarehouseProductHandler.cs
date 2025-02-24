@@ -2,7 +2,7 @@
 using GalaxyApp.Core.Features.Products.Queries.Handlers.GetAllProductHandlerDto;
 using GalaxyApp.Core.ResponseBase.GeneralResponse;
 using GalaxyApp.Core.ResponseBase.Paginations;
-using GalaxyApp.Service.Interfaces.ProductInterface;
+using GalaxyApp.Service.Interfaces;
 using MediatR;
 
 namespace GalaxyApp.Core.Features.Products.Queries.Handlers

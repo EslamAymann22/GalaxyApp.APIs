@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 using GalaxyApp.Core.Features.Products.Commands.Create.CreateCommandHandler;
-using GalaxyApp.Service.Interfaces.ProductInterface;
+using GalaxyApp.Service.Interfaces;
 
 namespace GalaxyApp.Core.Features.Products.Commands.Create.CreateCommandValidator
 {
@@ -17,11 +17,11 @@ namespace GalaxyApp.Core.Features.Products.Commands.Create.CreateCommandValidato
 
         public void ApplyValidationRules()
         {
-            RuleFor(P => P.Name).NotEmpty().NotNull().WithMessage($"must not be empty or null");
-            RuleFor(P => P.Color).NotEmpty().NotNull().WithMessage($"must not be empty or null");
-            RuleFor(P => P.Evaluation).InclusiveBetween(1, 10).NotNull().WithMessage($"Must between 1 and 10 inclusive");
-            RuleFor(P => P.sellingPrice).ExclusiveBetween(0, int.MaxValue).WithMessage($"must be positive number");
-            RuleFor(P => P.PurchasingPrice).ExclusiveBetween(0, int.MaxValue).WithMessage($"must be positive number");
+            RuleFor(P => P.Name).NotEmpty().NotNull().WithMessage($"Name must not be empty or null");
+            RuleFor(P => P.Color).NotEmpty().NotNull().WithMessage($"Color must not be empty or null");
+            RuleFor(P => P.Evaluation).InclusiveBetween(1, 10).NotNull().WithMessage($"Evaluation Must between 1 and 10 inclusive");
+            RuleFor(P => P.sellingPrice).ExclusiveBetween(0, int.MaxValue).WithMessage($"sellingPrice must be positive number");
+            RuleFor(P => P.PurchasingPrice).ExclusiveBetween(0, int.MaxValue).WithMessage($"PurchasingPrice must be positive number");
         }
 
         public void ApplyCustomValidationRules()

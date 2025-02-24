@@ -14,7 +14,7 @@ namespace GalaxyApp.Core.ResponseBase.Paginations
             }
 
             pageNumber = pageNumber <= 0 ? 1 : pageNumber;
-            pageSize = Min(Max(1, pageSize), 20);
+            pageSize = Min(Max(3, pageSize), 20);
 
             int count = await source.AsNoTracking().CountAsync();
             //if (count == 0) return PaginatedResponse<T>.Create(new List<T>(), count, pageNumber, pageSize);

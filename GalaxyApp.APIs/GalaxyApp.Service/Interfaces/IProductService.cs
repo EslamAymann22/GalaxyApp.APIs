@@ -3,7 +3,7 @@ using GalaxyApp.Data.Entities;
 using System.Net;
 
 
-namespace GalaxyApp.Service.Interfaces.ProductInterface
+namespace GalaxyApp.Service.Interfaces
 {
     public interface IProductService
     {

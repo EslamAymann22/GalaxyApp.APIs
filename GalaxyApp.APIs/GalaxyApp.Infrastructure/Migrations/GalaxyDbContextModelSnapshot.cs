@@ -159,9 +159,6 @@ namespace GalaxyApp.Infrastructure.Migrations
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    b.Property<decimal>("TotalInDiscount")
-                        .HasColumnType("decimal(18,2)");
-
                     b.HasKey("Id");
 
                     b.HasIndex("CustomerInvoiceId");
@@ -229,10 +226,12 @@ namespace GalaxyApp.Infrastructure.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
-                    b.Property<decimal>("TotalInDiscount")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<int>("SupplierId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("SupplierId");
 
                     b.ToTable("purchases");
                 });
@@ -245,7 +244,7 @@ namespace GalaxyApp.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("LatestPurchaseId")
+                    b.Property<int?>("LatestPurchaseId")
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
@@ -253,16 +252,16 @@ namespace GalaxyApp.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhotoFileName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhotoUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("LatestPurchaseId");
+                    b.HasIndex("LatestPurchaseId")
+                        .IsUnique()
+                        .HasFilter("[LatestPurchaseId] IS NOT NULL");
 
                     b.ToTable("suppliers");
                 });
@@ -426,13 +425,21 @@ namespace GalaxyApp.Infrastructure.Migrations
                     b.Navigation("ItemProduct");
                 });
 
+            modelBuilder.Entity("GalaxyApp.Data.Entities.Purchase", b =>
+                {
+                    b.HasOne("GalaxyApp.Data.Entities.Supplier", null)
+                        .WithMany("Purchases")
+                        .HasForeignKey("SupplierId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("GalaxyApp.Data.Entities.Supplier", b =>
                 {
                     b.HasOne("GalaxyApp.Data.Entities.Purchase", "LatestPurchase")
-                        .WithMany()
-                        .HasForeignKey("LatestPurchaseId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .WithOne("Supplier")
+                        .HasForeignKey("GalaxyApp.Data.Entities.Supplier", "LatestPurchaseId")
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("LatestPurchase");
                 });
@@ -501,6 +508,14 @@ namespace GalaxyApp.Infrastructure.Migrations
             modelBuilder.Entity("GalaxyApp.Data.Entities.Purchase", b =>
                 {
                     b.Navigation("PurchaseItems");
+
+                    b.Navigation("Supplier")
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("GalaxyApp.Data.Entities.Supplier", b =>
+                {
+                    b.Navigation("Purchases");
                 });
 #pragma warning restore 612, 618
         }

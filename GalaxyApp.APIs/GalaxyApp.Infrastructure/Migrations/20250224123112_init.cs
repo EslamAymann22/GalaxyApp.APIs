@@ -234,9 +234,9 @@ namespace GalaxyApp.Infrastructure.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    PhotoUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    PhotoFileName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    LatestPurchaseId = table.Column<int>(type: "int", nullable: false)
+                    PhotoUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PhotoFileName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LatestPurchaseId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -245,8 +245,7 @@ namespace GalaxyApp.Infrastructure.Migrations
                         name: "FK_suppliers_purchases_LatestPurchaseId",
                         column: x => x.LatestPurchaseId,
                         principalTable: "purchases",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(

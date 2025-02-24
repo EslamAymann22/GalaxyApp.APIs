@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using GalaxyApp.Core.ResponseBase.GeneralResponse;
 using GalaxyApp.Data.Entities;
-using GalaxyApp.Service.Interfaces.ProductInterface;
+using GalaxyApp.Service.Interfaces;
 using MediatR;
 
 namespace GalaxyApp.Core.Features.Products.Commands.Create.CreateCommandHandler

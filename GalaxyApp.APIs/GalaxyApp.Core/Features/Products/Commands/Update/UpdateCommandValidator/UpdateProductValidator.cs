@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 using GalaxyApp.Core.Features.Products.Commands.Update.UpdateCommandHandler;
-using GalaxyApp.Service.Interfaces.ProductInterface;
+using GalaxyApp.Service.Interfaces;
 
 namespace GalaxyApp.Core.Features.Products.Commands.Update.UpdateCommandValidator
 {

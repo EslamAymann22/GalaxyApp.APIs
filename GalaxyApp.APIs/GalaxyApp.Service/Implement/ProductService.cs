@@ -1,10 +1,10 @@
 ﻿using GalaxyApp.Core.ResponseBase.Paginations;
 using GalaxyApp.Data.Entities;
 using GalaxyApp.Infrastructure.Repositories.Interfaces;
-using GalaxyApp.Service.Interfaces.ProductInterface;
+using GalaxyApp.Service.Interfaces;
 using System.Net;
 
-namespace GalaxyApp.Service.Implement.ProductImp
+namespace GalaxyApp.Service.Implement
 {
     public class ProductService : IProductService
     {
@@ -12,7 +12,7 @@ namespace GalaxyApp.Service.Implement.ProductImp
 
         public ProductService(IProductRepo productRepo)
         {
-            this._productRepo = productRepo;
+            _productRepo = productRepo;
         }
 
         /* public async Task<bool> AddAsync(Product product)
