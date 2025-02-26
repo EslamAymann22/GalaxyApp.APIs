@@ -26,5 +26,17 @@ namespace GalaxyApp.Infrastructure.Repositories.Implement
         public async Task<IEnumerable<Supplier>> GetAllWithLstPurchaseAsync()
         => await _dbContext.suppliers.Include(P => P.LatestPurchase).ToListAsync();
 
+        public async Task<Supplier?> GetByIdAsync(int id)
+        => await _dbContext.Set<Supplier>().Where(P => P.Id == id).FirstOrDefaultAsync();
+
+        public async Task UpdateAsync(Supplier supplier)
+        {
+            _dbContext.suppliers.Update(supplier);
+            await _dbContext.SaveChangesAsync();
+        }
+
+        async Task<Supplier?> ISupplierRepo.GetByIdWithPurchaseAsync(int id)
+        => await _dbContext.Set<Supplier>().Where(P => P.Id == id).Include(P => P.LatestPurchase).FirstOrDefaultAsync();
+
     }
 }

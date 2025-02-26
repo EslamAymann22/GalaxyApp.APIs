@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GalaxyApp.Data.Entities.TransferDetectionFolder
+﻿namespace GalaxyApp.Data.Entities.TransferDetectionFolder
 {
-    public class TransferDetectionItems
+    public class TransferDetectionItems : BaseEntity
     {
 
         public int ProductId { get; set; }
         public Product Product { get; set; }
+
+        public int TransferDetectionId { get; set; }
+        public TransferDetection transferDetection { get; set; }
+
 
         public int Quantity { get; set; }
 

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace GalaxyApp.Data.Entities
 {
@@ -14,14 +8,20 @@ namespace GalaxyApp.Data.Entities
         public string Name { get; set; }
         public decimal PurchasingPrice { get; set; }
         public decimal sellingPrice { get; set; }
-        public int Quantity => WarehouseQuantity + ShopQuantity;
+        public int Quantity
+        {
+            get
+            {
+                return WarehouseQuantity + ShopQuantity;
+            }
+        }
         public int WarehouseQuantity { get; set; } = 0;
         public int ShopQuantity { get; set; } = 0;
         public decimal Discount { get; set; } = 0M;
         public string Color { get; set; }
-        [Range(1,10,ErrorMessage ="Rate Must be between 1 and 10")]
+        [Range(1, 10, ErrorMessage = "Rate Must be between 1 and 10")]
         [Required]
-        public int Evaluation {  get; set; }
+        public int Evaluation { get; set; }
 
         public string? ImageUrl { get; set; }
 

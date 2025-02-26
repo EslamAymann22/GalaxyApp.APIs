@@ -88,17 +88,16 @@ namespace GalaxyApp.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "purchases",
+                name: "transferDetections",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Date = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    TotalInDiscount = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
+                    transferDetectionType = table.Column<byte>(type: "tinyint", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_purchases", x => x.Id);
+                    table.PrimaryKey("PK_transferDetections", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -208,23 +207,126 @@ namespace GalaxyApp.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "customerInvoices",
+                name: "customerPurchases",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    CustomerId = table.Column<int>(type: "int", nullable: false),
+                    Date = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_customerPurchases", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_customerPurchases_customers_CustomerId",
+                        column: x => x.CustomerId,
+                        principalTable: "customers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "transferDetectionItems",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ProductId = table.Column<int>(type: "int", nullable: false),
+                    TransferDetectionId = table.Column<int>(type: "int", nullable: false),
+                    Quantity = table.Column<int>(type: "int", nullable: false),
+                    TransferDetectionId1 = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_transferDetectionItems", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_transferDetectionItems_products_ProductId",
+                        column: x => x.ProductId,
+                        principalTable: "products",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_transferDetectionItems_transferDetections_TransferDetectionId",
+                        column: x => x.TransferDetectionId,
+                        principalTable: "transferDetections",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_transferDetectionItems_transferDetections_TransferDetectionId1",
+                        column: x => x.TransferDetectionId1,
+                        principalTable: "transferDetections",
+                        principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "customerPurchaseItems",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Quantity = table.Column<int>(type: "int", nullable: false),
+                    Discount = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    ProductId = table.Column<int>(type: "int", nullable: false),
+                    CustomerPurchaseId = table.Column<int>(type: "int", nullable: false),
+                    CustomerPurchaseId1 = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_customerPurchaseItems", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_customerPurchaseItems_customerPurchases_CustomerPurchaseId",
+                        column: x => x.CustomerPurchaseId,
+                        principalTable: "customerPurchases",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_customerPurchaseItems_customerPurchases_CustomerPurchaseId1",
+                        column: x => x.CustomerPurchaseId1,
+                        principalTable: "customerPurchases",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_customerPurchaseItems_products_ProductId",
+                        column: x => x.ProductId,
+                        principalTable: "products",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "purchaseItems",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Quantity = table.Column<int>(type: "int", nullable: false),
+                    Discount = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    ProductId = table.Column<int>(type: "int", nullable: false),
+                    PurchaseId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_purchaseItems", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_purchaseItems_products_ProductId",
+                        column: x => x.ProductId,
+                        principalTable: "products",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "purchases",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Date = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    TotalPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    CustomerId = table.Column<int>(type: "int", nullable: true)
+                    SupplierId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_customerInvoices", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_customerInvoices_customers_CustomerId",
-                        column: x => x.CustomerId,
-                        principalTable: "customers",
-                        principalColumn: "Id");
+                    table.PrimaryKey("PK_purchases", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -234,9 +336,9 @@ namespace GalaxyApp.Infrastructure.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    LatestPurchaseId = table.Column<int>(type: "int", nullable: true),
                     PhotoUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    PhotoFileName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    LatestPurchaseId = table.Column<int>(type: "int", nullable: true)
+                    PhotoFileName = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -245,41 +347,8 @@ namespace GalaxyApp.Infrastructure.Migrations
                         name: "FK_suppliers_purchases_LatestPurchaseId",
                         column: x => x.LatestPurchaseId,
                         principalTable: "purchases",
-                        principalColumn: "Id");
-                });
-
-            migrationBuilder.CreateTable(
-                name: "InvoiceItems",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    ItemProductId = table.Column<int>(type: "int", nullable: false),
-                    Quantity = table.Column<int>(type: "int", nullable: false),
-                    Discount = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    TotalInDiscount = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    CustomerInvoiceId = table.Column<int>(type: "int", nullable: true),
-                    PurchaseId = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_InvoiceItems", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_InvoiceItems_customerInvoices_CustomerInvoiceId",
-                        column: x => x.CustomerInvoiceId,
-                        principalTable: "customerInvoices",
-                        principalColumn: "Id");
-                    table.ForeignKey(
-                        name: "FK_InvoiceItems_products_ItemProductId",
-                        column: x => x.ItemProductId,
-                        principalTable: "products",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_InvoiceItems_purchases_PurchaseId",
-                        column: x => x.PurchaseId,
-                        principalTable: "purchases",
-                        principalColumn: "Id");
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
@@ -322,34 +391,86 @@ namespace GalaxyApp.Infrastructure.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_customerInvoices_CustomerId",
-                table: "customerInvoices",
+                name: "IX_customerPurchaseItems_CustomerPurchaseId",
+                table: "customerPurchaseItems",
+                column: "CustomerPurchaseId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_customerPurchaseItems_CustomerPurchaseId1",
+                table: "customerPurchaseItems",
+                column: "CustomerPurchaseId1");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_customerPurchaseItems_ProductId",
+                table: "customerPurchaseItems",
+                column: "ProductId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_customerPurchases_CustomerId",
+                table: "customerPurchases",
                 column: "CustomerId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_InvoiceItems_CustomerInvoiceId",
-                table: "InvoiceItems",
-                column: "CustomerInvoiceId");
+                name: "IX_purchaseItems_ProductId",
+                table: "purchaseItems",
+                column: "ProductId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_InvoiceItems_ItemProductId",
-                table: "InvoiceItems",
-                column: "ItemProductId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_InvoiceItems_PurchaseId",
-                table: "InvoiceItems",
+                name: "IX_purchaseItems_PurchaseId",
+                table: "purchaseItems",
                 column: "PurchaseId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_purchases_SupplierId",
+                table: "purchases",
+                column: "SupplierId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_suppliers_LatestPurchaseId",
                 table: "suppliers",
-                column: "LatestPurchaseId");
+                column: "LatestPurchaseId",
+                unique: true,
+                filter: "[LatestPurchaseId] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_transferDetectionItems_ProductId",
+                table: "transferDetectionItems",
+                column: "ProductId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_transferDetectionItems_TransferDetectionId",
+                table: "transferDetectionItems",
+                column: "TransferDetectionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_transferDetectionItems_TransferDetectionId1",
+                table: "transferDetectionItems",
+                column: "TransferDetectionId1");
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_purchaseItems_purchases_PurchaseId",
+                table: "purchaseItems",
+                column: "PurchaseId",
+                principalTable: "purchases",
+                principalColumn: "Id",
+                onDelete: ReferentialAction.Restrict);
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_purchases_suppliers_SupplierId",
+                table: "purchases",
+                column: "SupplierId",
+                principalTable: "suppliers",
+                principalColumn: "Id",
+                onDelete: ReferentialAction.Restrict);
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropForeignKey(
+                name: "FK_suppliers_purchases_LatestPurchaseId",
+                table: "suppliers");
+
             migrationBuilder.DropTable(
                 name: "AspNetRoleClaims");
 
@@ -366,10 +487,13 @@ namespace GalaxyApp.Infrastructure.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "InvoiceItems");
+                name: "customerPurchaseItems");
 
             migrationBuilder.DropTable(
-                name: "suppliers");
+                name: "purchaseItems");
+
+            migrationBuilder.DropTable(
+                name: "transferDetectionItems");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
@@ -378,16 +502,22 @@ namespace GalaxyApp.Infrastructure.Migrations
                 name: "AspNetUsers");
 
             migrationBuilder.DropTable(
-                name: "customerInvoices");
+                name: "customerPurchases");
 
             migrationBuilder.DropTable(
                 name: "products");
 
             migrationBuilder.DropTable(
-                name: "purchases");
+                name: "transferDetections");
 
             migrationBuilder.DropTable(
                 name: "customers");
+
+            migrationBuilder.DropTable(
+                name: "purchases");
+
+            migrationBuilder.DropTable(
+                name: "suppliers");
         }
     }
 }

@@ -2,6 +2,25 @@
 {
     public class Purchase : BaseEntity
     {
+
+        public DateTime Date { get; set; } = DateTime.Now;
+        public int SupplierId { get; set; }
+        public Supplier Supplier { get; set; }
+        public Supplier SupplierLst { get; set; }
+
+
+
+        public decimal TotalInDiscount
+        {
+            get
+            {
+                return CalculateTotalInDiscount();
+            }
+        }
+
+        public List<PurchaseItems> PurchaseItems { get; set; } = new List<PurchaseItems>();
+
+
         private decimal CalculateTotalInDiscount()
         {
             decimal Ret = 0;
@@ -9,14 +28,5 @@
                 Ret += item.TotalInDiscount;
             return Ret;
         }
-
-
-        public int SupplierId { get; set; }
-        public Supplier Supplier { get; set; }
-        public DateTime Date { get; set; } = DateTime.Now;
-
-        public decimal TotalInDiscount => CalculateTotalInDiscount();
-
-        public List<InvoiceItems> PurchaseItems { get; set; } = new List<InvoiceItems>();
     }
 }

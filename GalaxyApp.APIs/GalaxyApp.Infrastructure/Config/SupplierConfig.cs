@@ -11,9 +11,16 @@ namespace GalaxyApp.Infrastructure.Config
             builder.Property(S => S.LatestPurchaseId).IsRequired(false);
 
             builder.HasOne(S => S.LatestPurchase)
-                .WithOne(S => S.Supplier)
+                .WithOne(P => P.SupplierLst)
                 .HasForeignKey<Supplier>(S => S.LatestPurchaseId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+
+            builder.HasMany(S => S.Purchases)
+               .WithOne(P => P.Supplier)
+               .HasForeignKey(S => S.SupplierId)
+               .OnDelete(DeleteBehavior.Restrict);
+
         }
 
     }

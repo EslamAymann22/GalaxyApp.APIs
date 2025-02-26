@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GalaxyApp.Data.Entities.CustomerFolder
+﻿namespace GalaxyApp.Data.Entities.CustomerFolder
 {
     public class Customer : BaseEntity
     {
@@ -12,6 +6,6 @@ namespace GalaxyApp.Data.Entities.CustomerFolder
 
         public string Phone { get; set; }
 
-        public List<CustomerInvoice> CustomerInvoices { get; set; } = new List<CustomerInvoice>();
+        public List<CustomerPurchase> customerPurchases { get; set; } = new List<CustomerPurchase>();
     }
 }

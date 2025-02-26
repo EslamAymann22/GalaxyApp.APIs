@@ -11,6 +11,8 @@ namespace GalaxyApp.Infrastructure
         {
             Service.AddScoped<IProductRepo, ProductRepo>();
             Service.AddScoped<ISupplierRepo, SupplierRepo>();
+            Service.AddScoped<IPurchaseRepo, PurchaseRepo>();
+            Service.AddScoped<IPurchaseItemRepo, PurchaseItemRepo>();
 
             return Service;
 

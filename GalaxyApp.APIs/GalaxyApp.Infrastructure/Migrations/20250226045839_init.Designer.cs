@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GalaxyApp.Infrastructure.Migrations
 {
     [DbContext(typeof(GalaxyDbContext))]
-    [Migration("20250224181047_init 2")]
-    partial class init2
+    [Migration("20250226045839_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -46,7 +46,7 @@ namespace GalaxyApp.Infrastructure.Migrations
                     b.ToTable("customers");
                 });
 
-            modelBuilder.Entity("GalaxyApp.Data.Entities.CustomerFolder.CustomerInvoice", b =>
+            modelBuilder.Entity("GalaxyApp.Data.Entities.CustomerFolder.CustomerPurchase", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -54,20 +54,51 @@ namespace GalaxyApp.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("CustomerId")
+                    b.Property<int>("CustomerId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
-                    b.Property<decimal>("TotalPrice")
-                        .HasColumnType("decimal(18,2)");
-
                     b.HasKey("Id");
 
                     b.HasIndex("CustomerId");
 
-                    b.ToTable("customerInvoices");
+                    b.ToTable("customerPurchases");
+                });
+
+            modelBuilder.Entity("GalaxyApp.Data.Entities.CustomerFolder.CustomerPurchaseItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CustomerPurchaseId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("CustomerPurchaseId1")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Discount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CustomerPurchaseId");
+
+                    b.HasIndex("CustomerPurchaseId1");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("customerPurchaseItems");
                 });
 
             modelBuilder.Entity("GalaxyApp.Data.Entities.Identity.AppUser", b =>
@@ -139,40 +170,6 @@ namespace GalaxyApp.Infrastructure.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
-            modelBuilder.Entity("GalaxyApp.Data.Entities.InvoiceItems", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int?>("CustomerInvoiceId")
-                        .HasColumnType("int");
-
-                    b.Property<decimal>("Discount")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<int>("ItemProductId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("PurchaseId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Quantity")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CustomerInvoiceId");
-
-                    b.HasIndex("ItemProductId");
-
-                    b.HasIndex("PurchaseId");
-
-                    b.ToTable("InvoiceItems");
-                });
-
             modelBuilder.Entity("GalaxyApp.Data.Entities.Product", b =>
                 {
                     b.Property<int>("Id")
@@ -239,6 +236,35 @@ namespace GalaxyApp.Infrastructure.Migrations
                     b.ToTable("purchases");
                 });
 
+            modelBuilder.Entity("GalaxyApp.Data.Entities.PurchaseItems", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<decimal>("Discount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PurchaseId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("PurchaseId");
+
+                    b.ToTable("purchaseItems");
+                });
+
             modelBuilder.Entity("GalaxyApp.Data.Entities.Supplier", b =>
                 {
                     b.Property<int>("Id")
@@ -267,6 +293,53 @@ namespace GalaxyApp.Infrastructure.Migrations
                         .HasFilter("[LatestPurchaseId] IS NOT NULL");
 
                     b.ToTable("suppliers");
+                });
+
+            modelBuilder.Entity("GalaxyApp.Data.Entities.TransferDetectionFolder.TransferDetection", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<byte>("transferDetectionType")
+                        .HasColumnType("tinyint");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("transferDetections");
+                });
+
+            modelBuilder.Entity("GalaxyApp.Data.Entities.TransferDetectionFolder.TransferDetectionItems", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TransferDetectionId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("TransferDetectionId1")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("TransferDetectionId");
+
+                    b.HasIndex("TransferDetectionId1");
+
+                    b.ToTable("transferDetectionItems");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -402,49 +475,101 @@ namespace GalaxyApp.Infrastructure.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("GalaxyApp.Data.Entities.CustomerFolder.CustomerInvoice", b =>
+            modelBuilder.Entity("GalaxyApp.Data.Entities.CustomerFolder.CustomerPurchase", b =>
                 {
-                    b.HasOne("GalaxyApp.Data.Entities.CustomerFolder.Customer", null)
-                        .WithMany("CustomerInvoices")
-                        .HasForeignKey("CustomerId");
-                });
-
-            modelBuilder.Entity("GalaxyApp.Data.Entities.InvoiceItems", b =>
-                {
-                    b.HasOne("GalaxyApp.Data.Entities.CustomerFolder.CustomerInvoice", null)
-                        .WithMany("invoiceItems")
-                        .HasForeignKey("CustomerInvoiceId");
-
-                    b.HasOne("GalaxyApp.Data.Entities.Product", "ItemProduct")
-                        .WithMany()
-                        .HasForeignKey("ItemProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                    b.HasOne("GalaxyApp.Data.Entities.CustomerFolder.Customer", "Customer")
+                        .WithMany("customerPurchases")
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("GalaxyApp.Data.Entities.Purchase", null)
-                        .WithMany("PurchaseItems")
-                        .HasForeignKey("PurchaseId");
+                    b.Navigation("Customer");
+                });
 
-                    b.Navigation("ItemProduct");
+            modelBuilder.Entity("GalaxyApp.Data.Entities.CustomerFolder.CustomerPurchaseItem", b =>
+                {
+                    b.HasOne("GalaxyApp.Data.Entities.CustomerFolder.CustomerPurchase", "CustomerPurchase")
+                        .WithMany()
+                        .HasForeignKey("CustomerPurchaseId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("GalaxyApp.Data.Entities.CustomerFolder.CustomerPurchase", null)
+                        .WithMany("purchaseItems")
+                        .HasForeignKey("CustomerPurchaseId1");
+
+                    b.HasOne("GalaxyApp.Data.Entities.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("CustomerPurchase");
+
+                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("GalaxyApp.Data.Entities.Purchase", b =>
                 {
-                    b.HasOne("GalaxyApp.Data.Entities.Supplier", null)
+                    b.HasOne("GalaxyApp.Data.Entities.Supplier", "Supplier")
                         .WithMany("Purchases")
                         .HasForeignKey("SupplierId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
+
+                    b.Navigation("Supplier");
+                });
+
+            modelBuilder.Entity("GalaxyApp.Data.Entities.PurchaseItems", b =>
+                {
+                    b.HasOne("GalaxyApp.Data.Entities.Product", "ItemProduct")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("GalaxyApp.Data.Entities.Purchase", "Purchase")
+                        .WithMany("PurchaseItems")
+                        .HasForeignKey("PurchaseId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("ItemProduct");
+
+                    b.Navigation("Purchase");
                 });
 
             modelBuilder.Entity("GalaxyApp.Data.Entities.Supplier", b =>
                 {
                     b.HasOne("GalaxyApp.Data.Entities.Purchase", "LatestPurchase")
-                        .WithOne("Supplier")
+                        .WithOne("SupplierLst")
                         .HasForeignKey("GalaxyApp.Data.Entities.Supplier", "LatestPurchaseId")
                         .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("LatestPurchase");
+                });
+
+            modelBuilder.Entity("GalaxyApp.Data.Entities.TransferDetectionFolder.TransferDetectionItems", b =>
+                {
+                    b.HasOne("GalaxyApp.Data.Entities.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("GalaxyApp.Data.Entities.TransferDetectionFolder.TransferDetection", "transferDetection")
+                        .WithMany()
+                        .HasForeignKey("TransferDetectionId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("GalaxyApp.Data.Entities.TransferDetectionFolder.TransferDetection", null)
+                        .WithMany("TransferDetectionItems")
+                        .HasForeignKey("TransferDetectionId1");
+
+                    b.Navigation("Product");
+
+                    b.Navigation("transferDetection");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -500,25 +625,30 @@ namespace GalaxyApp.Infrastructure.Migrations
 
             modelBuilder.Entity("GalaxyApp.Data.Entities.CustomerFolder.Customer", b =>
                 {
-                    b.Navigation("CustomerInvoices");
+                    b.Navigation("customerPurchases");
                 });
 
-            modelBuilder.Entity("GalaxyApp.Data.Entities.CustomerFolder.CustomerInvoice", b =>
+            modelBuilder.Entity("GalaxyApp.Data.Entities.CustomerFolder.CustomerPurchase", b =>
                 {
-                    b.Navigation("invoiceItems");
+                    b.Navigation("purchaseItems");
                 });
 
             modelBuilder.Entity("GalaxyApp.Data.Entities.Purchase", b =>
                 {
                     b.Navigation("PurchaseItems");
 
-                    b.Navigation("Supplier")
+                    b.Navigation("SupplierLst")
                         .IsRequired();
                 });
 
             modelBuilder.Entity("GalaxyApp.Data.Entities.Supplier", b =>
                 {
                     b.Navigation("Purchases");
+                });
+
+            modelBuilder.Entity("GalaxyApp.Data.Entities.TransferDetectionFolder.TransferDetection", b =>
+                {
+                    b.Navigation("TransferDetectionItems");
                 });
 #pragma warning restore 612, 618
         }
