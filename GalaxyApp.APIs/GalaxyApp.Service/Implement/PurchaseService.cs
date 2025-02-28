@@ -36,6 +36,9 @@ namespace GalaxyApp.Service.Implement
         public async Task<Purchase> GetByIdAsync(int Id)
             => await _purchaseRepo.GetByIdAsync(Id);
 
+        public IQueryable<Purchase> GetQueryableNoTracking()
+            => _purchaseRepo.GetQueryableNoTracking();
+
         public async Task UpdateAsync(Purchase purchase)
            => await _purchaseRepo.UpdateAsync(purchase);
 

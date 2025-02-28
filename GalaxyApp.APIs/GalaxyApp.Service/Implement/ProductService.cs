@@ -94,5 +94,37 @@ namespace GalaxyApp.Service.Implement
 
             return Data;
         }
+
+        public async Task<bool> ChangeQuantityAsync(int ProductId, int Amount, TransferDetectionType transferDetectionType, bool Save)
+        {
+            var product = await GetByIdAsync(ProductId);
+            if (product == null) return false;
+
+
+
+            if (transferDetectionType == TransferDetectionType.FromShopToWarehouse)
+            {
+                if (product.ShopQuantity < Amount) return false;
+                if (Save)
+                {
+                    product.ShopQuantity -= Amount;
+                    product.WarehouseQuantity += Amount;
+                }
+            }
+            else
+            {
+                if (product.WarehouseQuantity < Amount) return false;
+                if (Save)
+                {
+                    Amount *= -1;
+                    product.ShopQuantity -= Amount;
+                    product.WarehouseQuantity += Amount;
+                }
+            }
+            if (Save)
+                Update(product);
+            return true;
+        }
+
     }
 }

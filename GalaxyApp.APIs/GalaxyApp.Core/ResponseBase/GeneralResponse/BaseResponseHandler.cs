@@ -24,13 +24,13 @@ namespace GalaxyApp.Core.ResponseBase.GeneralResponse
             };
         }
 
-        public BaseResponse<T> Failed<T>(HttpStatusCode statusCode)
+        public BaseResponse<T> Failed<T>(HttpStatusCode statusCode, string Message = "")
         {
             return new BaseResponse<T>()
             {
                 IsSuccess = false,
                 Status = statusCode,
-                ProcessMessage = statusCode.ToString()
+                ProcessMessage = statusCode.ToString() + " " + Message
             };
 
         }

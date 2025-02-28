@@ -9,6 +9,13 @@ namespace GalaxyApp.Core.Mapping.SupplierMapping.SupplierQueryMapping
         public SupplierQueryProfile()
         {
 
+            CreateMap<PurchaseItems, PurchaseItemsDto>()
+                .ForMember(dest => dest.ProductName, opt => opt.MapFrom(src => src.ItemProduct.Name))
+                .ForMember(dest => dest.Price, opt => opt.MapFrom(src => src.ItemProduct.PurchasingPrice));
+
+
+            CreateMap<Purchase, LatestPurchaseDto>();
+
             CreateMap<Supplier, GetAllSupplierDto>();
 
             //    .ForMember(dest => dest.LatestPurchase, opt => opt.MapFrom(src => src.LatestPurchase))

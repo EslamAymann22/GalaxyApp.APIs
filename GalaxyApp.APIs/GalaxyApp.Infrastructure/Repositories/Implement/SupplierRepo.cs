@@ -24,7 +24,9 @@ namespace GalaxyApp.Infrastructure.Repositories.Implement
         => await _dbContext.suppliers.ToListAsync();
 
         public async Task<IEnumerable<Supplier>> GetAllWithLstPurchaseAsync()
-        => await _dbContext.suppliers.Include(P => P.LatestPurchase).ToListAsync();
+        => await _dbContext.suppliers.Include(P => P.LatestPurchase)
+            .ThenInclude(LP => LP.PurchaseItems)
+            .ThenInclude(PI => PI.ItemProduct).ToListAsync();
 
         public async Task<Supplier?> GetByIdAsync(int id)
         => await _dbContext.Set<Supplier>().Where(P => P.Id == id).FirstOrDefaultAsync();

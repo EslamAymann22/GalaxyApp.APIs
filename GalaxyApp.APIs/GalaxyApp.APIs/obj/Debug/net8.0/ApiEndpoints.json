@@ -297,6 +297,47 @@
     ]
   },
   {
+    "ContainingType": "GalaxyApp.APIs.Controllers.PurchaseController",
+    "Method": "GetAllPurchase",
+    "RelativePath": "api/Purchase",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrderFilter",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SearchFilter",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "GalaxyApp.Core.ResponseBase.GeneralResponse.BaseResponse\u00601[[GalaxyApp.Core.ResponseBase.Paginations.PaginatedResponse\u00601[[GalaxyApp.Core.Features.Purchases.Queries.GetAllPurchaseDto, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "GalaxyApp.APIs.Controllers.SupplierController",
     "Method": "CreateSupplier",
     "RelativePath": "api/Supplier",
@@ -333,6 +374,32 @@
     "ReturnTypes": [
       {
         "Type": "GalaxyApp.Core.ResponseBase.GeneralResponse.BaseResponse\u00601[[GalaxyApp.Core.Features.Suppliers.Queries.GetAllQuery.GetAllSupplierDto, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GalaxyApp.APIs.Controllers.TransferDetectionController",
+    "Method": "CreateTransferDetection",
+    "RelativePath": "api/TransferDetection",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Model",
+        "Type": "GalaxyApp.Core.Features.TransferDetections.Commands.Create.CreateCommandHandler.CreateTransferDetectionModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
         "MediaTypes": [
           "text/plain",
           "application/json",

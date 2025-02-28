@@ -17,6 +17,7 @@ namespace GalaxyApp.Service.Interfaces
         IQueryable<Product> ApplyOrderByAndSearchFilter(IQueryable<Product> Data, ProductOrderEnum? OrderBy, string? Search);
         Task<HttpStatusCode> CheckProductUpdate(Product product);
 
+        Task<bool> ChangeQuantityAsync(int ProductId, int Amount, TransferDetectionType transferDetectionType, bool Save);
 
 
     }

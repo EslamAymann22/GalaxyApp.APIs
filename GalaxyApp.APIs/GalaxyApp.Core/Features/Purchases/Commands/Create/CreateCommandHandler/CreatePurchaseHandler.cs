@@ -56,7 +56,7 @@ namespace GalaxyApp.Core.Features.Purchases.Commands.Create.CreateCommandHandler
                 };
 
                 var NewPurchaseItemId = await _purchaseItemService.AddAsync(purchaseItems);
-                CreatedPurchase.PurchaseItems.Add(purchaseItems);
+                //CreatedPurchase.PurchaseItems.Add(purchaseItems);   // Data Duplicate 
             }
 
             await _purchaseService.UpdateAsync(CreatedPurchase);

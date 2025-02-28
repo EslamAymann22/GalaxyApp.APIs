@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GalaxyApp.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3c1ef3c224e5e56b5bee9a955d65645cae9774fc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+80b29c5707310de1ef7eb4b43f1cae3ac5453f9a")]
 [assembly: System.Reflection.AssemblyProductAttribute("GalaxyApp.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GalaxyApp.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

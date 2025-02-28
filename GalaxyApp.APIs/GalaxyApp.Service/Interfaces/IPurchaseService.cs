@@ -14,5 +14,8 @@ namespace GalaxyApp.Service.Interfaces
 
         Task AddPurchaseProducts(Purchase purchase);
 
+        IQueryable<Purchase> GetQueryableNoTracking();
+
+
     }
 }

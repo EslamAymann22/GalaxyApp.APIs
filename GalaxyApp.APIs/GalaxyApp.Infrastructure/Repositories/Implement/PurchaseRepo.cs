@@ -32,6 +32,9 @@ namespace GalaxyApp.Infrastructure.Repositories.Implement
             .Include(P => P.PurchaseItems)
             .FirstOrDefaultAsync();
 
+        public IQueryable<Purchase> GetQueryableNoTracking()
+          => _galaxyDb.purchases.Include(P => P.PurchaseItems).ThenInclude(PI => PI.ItemProduct).AsNoTracking().AsQueryable();
+
         public async Task UpdateAsync(Purchase purchase)
         {
             _galaxyDb.purchases.Update(purchase);
