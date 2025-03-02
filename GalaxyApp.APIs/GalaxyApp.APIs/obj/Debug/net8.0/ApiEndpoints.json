@@ -1,5 +1,36 @@
 [
   {
+    "ContainingType": "GalaxyApp.APIs.Controllers.CustomerController",
+    "Method": "CreateCustomer",
+    "RelativePath": "api/Customer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Phone",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "GalaxyApp.Core.ResponseBase.GeneralResponse.BaseResponse\u00601[[GalaxyApp.Core.Features.Customers.Commands.Create.CreateCommandHandler.CreateCustomerModel, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "GalaxyApp.APIs.Controllers.ProductController",
     "Method": "GetAllProducts",
     "RelativePath": "api/Product",
