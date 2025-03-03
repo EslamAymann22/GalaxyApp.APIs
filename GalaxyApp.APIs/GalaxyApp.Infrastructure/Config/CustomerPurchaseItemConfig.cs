@@ -11,12 +11,12 @@ namespace GalaxyApp.Infrastructure.Config
             builder.HasOne(CPI => CPI.Product)
                 .WithMany()
                 .HasForeignKey(CPI => CPI.ProductId)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Cascade);
 
             builder.HasOne(CPI => CPI.CustomerPurchase)
                 .WithMany()
                 .HasForeignKey(CPI => CPI.CustomerPurchaseId)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Cascade);
 
         }
     }

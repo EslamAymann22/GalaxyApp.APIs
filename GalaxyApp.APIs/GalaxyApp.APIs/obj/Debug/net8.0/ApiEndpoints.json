@@ -31,6 +31,32 @@
     ]
   },
   {
+    "ContainingType": "GalaxyApp.APIs.Controllers.CustomerPurchaseController",
+    "Method": "CreateCustomerPurchase",
+    "RelativePath": "api/CustomerPurchase",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "GalaxyApp.Core.Features.CustomerInvoices.Commands.Create.CreateCommandHandler.CreateCustomerInvoiceModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "GalaxyApp.Core.ResponseBase.GeneralResponse.BaseResponse\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "GalaxyApp.APIs.Controllers.ProductController",
     "Method": "GetAllProducts",
     "RelativePath": "api/Product",

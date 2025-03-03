@@ -11,7 +11,7 @@ namespace GalaxyApp.Infrastructure.Config
             builder.HasOne(CP => CP.Customer)
                 .WithMany(C => C.customerPurchases)
                 .HasForeignKey(CP => CP.CustomerId)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

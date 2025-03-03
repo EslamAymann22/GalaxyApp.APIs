@@ -30,6 +30,17 @@ namespace GalaxyApp.Service.Implement
             }
         }
 
+        public async Task<bool> DeleteAsync(int Id)
+        {
+            var DeletedPurchase = await _purchaseRepo.GetByIdAsync(Id);
+            if (DeletedPurchase is not null)
+            {
+                await _purchaseRepo.DeleteAsync(DeletedPurchase);
+                return true;
+            }
+            return false;
+        }
+
         public async Task<List<Purchase>> GetAllAsync()
         => await _purchaseRepo.GetAllAsync();
 

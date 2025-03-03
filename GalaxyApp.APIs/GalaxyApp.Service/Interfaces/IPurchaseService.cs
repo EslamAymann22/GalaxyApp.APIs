@@ -7,6 +7,7 @@ namespace GalaxyApp.Service.Interfaces
 
         Task<List<Purchase>> GetAllAsync();
         Task<Purchase> GetByIdAsync(int Id);
+        Task<bool> DeleteAsync(int Id);
 
         Task<int> AddAsync(Purchase purchase);
 

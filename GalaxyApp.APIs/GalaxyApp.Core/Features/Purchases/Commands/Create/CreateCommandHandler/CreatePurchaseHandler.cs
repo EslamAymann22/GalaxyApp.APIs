@@ -9,7 +9,7 @@ namespace GalaxyApp.Core.Features.Purchases.Commands.Create.CreateCommandHandler
     public class CreatePurchaseModel : IRequest<BaseResponse<string>>
     {
         public int SupplierId { get; set; }
-        public List<CreateInvoiceItemDto> PurchaseItems { get; set; }
+        public List<CreateInvoiceItemDto> PurchaseItemsList { get; set; }
 
     }
 
@@ -45,7 +45,7 @@ namespace GalaxyApp.Core.Features.Purchases.Commands.Create.CreateCommandHandler
             UpdatedSupplier.LatestPurchaseId = NewPurchaseId;
             #endregion
 
-            foreach (var item in request.PurchaseItems)
+            foreach (var item in request.PurchaseItemsList)
             {
                 PurchaseItems purchaseItems = new PurchaseItems()
                 {
@@ -56,7 +56,7 @@ namespace GalaxyApp.Core.Features.Purchases.Commands.Create.CreateCommandHandler
                 };
 
                 var NewPurchaseItemId = await _purchaseItemService.AddAsync(purchaseItems);
-                //CreatedPurchase.PurchaseItems.Add(purchaseItems);   // Data Duplicate 
+                //CreatedPurchase.PurchaseItemsList.Add(purchaseItems);   // Data Duplicate 
             }
 
             await _purchaseService.UpdateAsync(CreatedPurchase);

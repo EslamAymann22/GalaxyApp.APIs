@@ -22,14 +22,17 @@ namespace GalaxyApp.Infrastructure.Repositories.Implement
             return PIId;
         }
 
-        public Task<PurchaseItems> GetAllWithProductAsync()
+        public async Task DeleteAsync(PurchaseItems purchaseItems)
         {
-            throw new NotImplementedException();
+            _galaxyDb.purchaseItems.Remove(purchaseItems);
+            await _galaxyDb.SaveChangesAsync();
         }
 
-        public Task<PurchaseItems> GetByIdWithProductAsync()
-        {
-            throw new NotImplementedException();
-        }
+        public async Task<List<PurchaseItems>> GetAllWithProductAsync()
+            => await _galaxyDb.purchaseItems.Include(PI => PI.ItemProduct).ToListAsync();
+
+
+        public async Task<PurchaseItems> GetByIdWithProductAsync(int Id)
+        => await _galaxyDb.purchaseItems.Where(PI => PI.Id == Id).Include(PI => PI.ItemProduct).FirstOrDefaultAsync();
     }
 }

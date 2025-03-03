@@ -22,7 +22,7 @@ namespace GalaxyApp.Core.Features.Purchases.Commands.Create.CreateCommandValidat
         public void ApplyValidationRules()
         {
             RuleFor(P => P.SupplierId).NotEmpty().NotNull().WithMessage($"Supplier Id Is Required");
-            RuleForEach(P => P.PurchaseItems).ChildRules(Item =>
+            RuleForEach(P => P.PurchaseItemsList).ChildRules(Item =>
             {
                 Item.RuleFor(I => I.Quantity).GreaterThan(0);
                 Item.RuleFor(I => I.ProductId).GreaterThan(0);
@@ -39,7 +39,7 @@ namespace GalaxyApp.Core.Features.Purchases.Commands.Create.CreateCommandValidat
             .WithMessage("This Supplier Isn't Exist");
 
 
-            RuleForEach(P => P.PurchaseItems).ChildRules(Item =>
+            RuleForEach(P => P.PurchaseItemsList).ChildRules(Item =>
             {
                 Item.RuleFor(I => I).MustAsync(async (Model, CancellationToken)
                 => (await _productService.GetByIdAsync(Model.ProductId))

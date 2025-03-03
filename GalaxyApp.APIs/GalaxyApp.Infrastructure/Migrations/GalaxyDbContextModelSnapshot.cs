@@ -477,7 +477,7 @@ namespace GalaxyApp.Infrastructure.Migrations
                     b.HasOne("GalaxyApp.Data.Entities.CustomerFolder.Customer", "Customer")
                         .WithMany("customerPurchases")
                         .HasForeignKey("CustomerId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Customer");
@@ -488,7 +488,7 @@ namespace GalaxyApp.Infrastructure.Migrations
                     b.HasOne("GalaxyApp.Data.Entities.CustomerFolder.CustomerPurchase", "CustomerPurchase")
                         .WithMany()
                         .HasForeignKey("CustomerPurchaseId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("GalaxyApp.Data.Entities.CustomerFolder.CustomerPurchase", null)
@@ -498,7 +498,7 @@ namespace GalaxyApp.Infrastructure.Migrations
                     b.HasOne("GalaxyApp.Data.Entities.Product", "Product")
                         .WithMany()
                         .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("CustomerPurchase");

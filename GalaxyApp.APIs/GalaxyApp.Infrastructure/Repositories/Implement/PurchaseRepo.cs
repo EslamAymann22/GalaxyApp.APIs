@@ -16,10 +16,17 @@ namespace GalaxyApp.Infrastructure.Repositories.Implement
 
         public async Task<int> AddAsync(Purchase purchase)
         {
-            await _galaxyDb.AddAsync(purchase);
+            await _galaxyDb.purchases.AddAsync(purchase);
+            //await _galaxyDb.AddAsync(purchase);
             await _galaxyDb.SaveChangesAsync();
             int PId = (await _galaxyDb.purchases.OrderByDescending(p => p.Id).FirstOrDefaultAsync()).Id;
             return PId;
+        }
+
+        public async Task DeleteAsync(Purchase purchase)
+        {
+            _galaxyDb.purchases.Remove(purchase);
+            await _galaxyDb.SaveChangesAsync();
         }
 
         public async Task<List<Purchase>> GetAllAsync()
