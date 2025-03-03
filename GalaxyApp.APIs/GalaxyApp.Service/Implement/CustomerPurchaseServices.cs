@@ -20,7 +20,18 @@ namespace GalaxyApp.Service.Implement
             return await _customerPurchaseRepo.AddAsync(purchase);
         }
 
+        public IQueryable<CustomerPurchase> ApplySearchFilter(IQueryable<CustomerPurchase> Data, string? Search)
+        {
+            if (Search is not null)
+            {
+                Search = Search.ToLower();
+                Data = Data.Where(P => P.Customer.Name.ToLower().Contains(Search)
+                                    || P.Customer.Phone.Contains(Search));
+            }
 
+            return Data;
+
+        }
 
         public async Task<bool> CheckQuantityOfProducts(CustomerPurchase purchase)
         {
@@ -63,9 +74,16 @@ namespace GalaxyApp.Service.Implement
             return await _customerPurchaseRepo.GetByIdAsync(Id);
         }
 
+        public IQueryable<CustomerPurchase> GetQueryableNoTracking()
+            => _customerPurchaseRepo.GetQueryableNoTracking();
+
+
         public async Task UpdateAsync(CustomerPurchase purchase)
         {
             await _customerPurchaseRepo.UpdateAsync(purchase);
         }
+
+
+
     }
 }

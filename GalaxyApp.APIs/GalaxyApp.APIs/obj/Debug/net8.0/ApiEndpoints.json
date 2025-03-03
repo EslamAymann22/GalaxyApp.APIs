@@ -57,6 +57,47 @@
     ]
   },
   {
+    "ContainingType": "GalaxyApp.APIs.Controllers.CustomerPurchaseController",
+    "Method": "GetAllCustomerPurchase",
+    "RelativePath": "api/CustomerPurchase",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrderFilter",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SearchFilter",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "GalaxyApp.Core.ResponseBase.GeneralResponse.BaseResponse\u00601[[GalaxyApp.Core.ResponseBase.Paginations.PaginatedResponse\u00601[[GalaxyApp.Core.Features.CustomerInvoices.Queries.GetAllCustomerPurchaseDto, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "GalaxyApp.APIs.Controllers.ProductController",
     "Method": "GetAllProducts",
     "RelativePath": "api/Product",

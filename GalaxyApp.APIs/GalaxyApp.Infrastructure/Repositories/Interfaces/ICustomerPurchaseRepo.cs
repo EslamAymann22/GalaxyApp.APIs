@@ -12,6 +12,7 @@ namespace GalaxyApp.Infrastructure.Repositories.Interfaces
         Task<CustomerPurchase> GetByIdAsync(int Id);
         Task DeleteAsync(CustomerPurchase purchase);
 
+        IQueryable<CustomerPurchase> GetQueryableNoTracking();
 
     }
 }

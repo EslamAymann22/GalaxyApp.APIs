@@ -33,6 +33,9 @@ namespace GalaxyApp.Infrastructure.Repositories.Implement
         public async Task<CustomerPurchase> GetByIdAsync(int Id)
         => await _galaxyDbContext.customerPurchases.Where(CP => CP.Id == Id).FirstOrDefaultAsync();
 
+        public IQueryable<CustomerPurchase> GetQueryableNoTracking()
+        => _galaxyDbContext.customerPurchases.Include(CP => CP.Customer).AsNoTracking().AsQueryable();
+
         public async Task UpdateAsync(CustomerPurchase purchase)
         {
             _galaxyDbContext.customerPurchases.Update(purchase);

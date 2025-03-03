@@ -11,5 +11,9 @@ namespace GalaxyApp.Service.Interfaces
 
         Task<bool> CheckQuantityOfProducts(CustomerPurchase purchase);
 
+        IQueryable<CustomerPurchase> GetQueryableNoTracking();
+
+        IQueryable<CustomerPurchase> ApplySearchFilter(IQueryable<CustomerPurchase> Data, string? Search);
+
     }
 }
