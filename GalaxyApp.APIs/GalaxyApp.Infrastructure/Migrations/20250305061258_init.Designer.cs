@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GalaxyApp.Infrastructure.Migrations
 {
     [DbContext(typeof(GalaxyDbContext))]
-    [Migration("20250305025314_init")]
+    [Migration("20250305061258_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -123,6 +123,9 @@ namespace GalaxyApp.Infrastructure.Migrations
                     b.Property<string>("FirstName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Gender")
+                        .HasColumnType("int");
 
                     b.Property<string>("LastName")
                         .IsRequired()

@@ -1,4 +1,5 @@
 ﻿using GalaxyApp.Core.Features.Accounts.Commands.Create;
+using GalaxyApp.Core.Features.Accounts.Commands.Update.Password;
 using GalaxyApp.Core.ResponseBase.GeneralResponse;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -17,9 +18,14 @@ namespace GalaxyApp.APIs.Controllers
         [HttpPost("Create")]
         public async Task<ActionResult<BaseResponse<string>>> CreateAccount([FromQuery] CreateAccountModel Model)
         {
-            return await _mediator.Send(Model);
+            return BaseOk(await _mediator.Send(Model));
         }
 
+        [HttpPost("ChangePassword")]
+        public async Task<ActionResult<BaseResponse<string>>> ChangePassword([FromQuery] UpdateAccountPasswordModel Model)
+        {
+            return BaseOk(await _mediator.Send(Model));
+        }
 
     }
 }
