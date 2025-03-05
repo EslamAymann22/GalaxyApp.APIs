@@ -28,7 +28,16 @@ namespace GalaxyApp.APIs
                 Options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
             });
 
-            builder.Services.AddIdentity<AppUser, IdentityRole>()
+            builder.Services.AddIdentity<AppUser, IdentityRole>(Options =>
+            {
+                Options.Password.RequireUppercase = false;
+                Options.Password.RequireNonAlphanumeric = false;
+                Options.Password.RequireDigit = false;
+                Options.Password.RequireLowercase = false;
+                Options.User.RequireUniqueEmail = true;
+
+
+            })
                          .AddEntityFrameworkStores<GalaxyDbContext>();
 
             builder.Services.AddInfrastructureDependencies()

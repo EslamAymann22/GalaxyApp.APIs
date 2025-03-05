@@ -1,15 +1,13 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace GalaxyApp.Data.Entities.Identity
 {
     public class AppUser : IdentityUser
     {
-        public string DisplayName { get; set; }
-        UserManager<AppUser> UserManager { get; set; }
+        [Required]
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        //UserManager<AppUser> UserManager { get; set; }
     }
 }
