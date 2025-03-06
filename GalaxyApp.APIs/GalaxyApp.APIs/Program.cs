@@ -4,6 +4,7 @@ using GalaxyApp.Core.MiddleWare;
 using GalaxyApp.Data.Entities.Identity;
 using GalaxyApp.Infrastructure;
 using GalaxyApp.Infrastructure.DbContextData;
+using GalaxyApp.Service;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -37,12 +38,17 @@ namespace GalaxyApp.APIs
                 Options.User.RequireUniqueEmail = true;
 
 
-            })
-                         .AddEntityFrameworkStores<GalaxyDbContext>();
+            }).AddEntityFrameworkStores<GalaxyDbContext>();
 
             builder.Services.AddInfrastructureDependencies()
                             .AddServicesDependencies()
-                            .AddCoreDependencies();
+                            .AddCoreDependencies()
+                            .AddJWTTokenConfigurations(builder.Configuration);
+
+
+
+
+
 
             var app = builder.Build();
 

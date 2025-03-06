@@ -92,6 +92,32 @@
     ]
   },
   {
+    "ContainingType": "GalaxyApp.APIs.Controllers.AccountController",
+    "Method": "Login",
+    "RelativePath": "api/Account/Login",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Model",
+        "Type": "GalaxyApp.Core.Features.Accounts.Queries.Login.LoginModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "GalaxyApp.APIs.Controllers.CustomerController",
     "Method": "CreateCustomer",
     "RelativePath": "api/Customer",
@@ -239,34 +265,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Name",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Color",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Quantity",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "Evaluation",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "PurchasingPrice",
-        "Type": "System.Decimal",
-        "IsRequired": false
-      },
-      {
-        "Name": "sellingPrice",
-        "Type": "System.Decimal",
-        "IsRequired": false
+        "Name": "model",
+        "Type": "GalaxyApp.Core.Features.Products.Commands.Create.CreateCommandHandler.CreateProductModel",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": [

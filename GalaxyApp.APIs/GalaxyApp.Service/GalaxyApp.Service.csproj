@@ -13,6 +13,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.13" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\GalaxyApp.Data\GalaxyApp.Data.csproj" />
     <ProjectReference Include="..\GalaxyApp.Infrastructure\GalaxyApp.Infrastructure.csproj" />
     <ProjectReference Include="..\GalaxyApp.Share\GalaxyApp.Share.csproj" />

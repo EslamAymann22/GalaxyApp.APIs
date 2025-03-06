@@ -1,5 +1,6 @@
 ﻿using GalaxyApp.Core.Features.Accounts.Commands.Create;
 using GalaxyApp.Core.Features.Accounts.Commands.Update.Password;
+using GalaxyApp.Core.Features.Accounts.Queries.Login;
 using GalaxyApp.Core.ResponseBase.GeneralResponse;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -15,6 +16,13 @@ namespace GalaxyApp.APIs.Controllers
             this._mediator = mediator;
         }
 
+
+        [HttpGet("Login")]
+        public async Task<ActionResult<int>> Login([FromBody] LoginModel Model)
+        {
+            return BaseOk(await _mediator.Send(Model));
+        }
+
         [HttpPost("Create")]
         public async Task<ActionResult<BaseResponse<string>>> CreateAccount([FromQuery] CreateAccountModel Model)
         {
@@ -26,6 +34,9 @@ namespace GalaxyApp.APIs.Controllers
         {
             return BaseOk(await _mediator.Send(Model));
         }
+
+
+
 
     }
 }
