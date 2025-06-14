@@ -29,19 +29,6 @@
           "SelectedChildIndex": 7,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IProductService.cs",
-              "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.Service\\Interfaces\\IProductService.cs",
-              "RelativeDocumentMoniker": "GalaxyApp.Service\\Interfaces\\IProductService.cs",
-              "ToolTip": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.Service\\Interfaces\\IProductService.cs",
-              "RelativeToolTip": "GalaxyApp.Service\\Interfaces\\IProductService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T17:35:10.507Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
@@ -59,6 +46,18 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IProductService.cs",
+              "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.Service\\Interfaces\\IProductService.cs",
+              "RelativeDocumentMoniker": "GalaxyApp.Service\\Interfaces\\IProductService.cs",
+              "ToolTip": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.Service\\Interfaces\\IProductService.cs",
+              "RelativeToolTip": "GalaxyApp.Service\\Interfaces\\IProductService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T17:35:10.507Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "ProductService.cs",
               "DocumentMoniker": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.Service\\Implement\\ProductService.cs",
@@ -67,8 +66,7 @@
               "RelativeToolTip": "GalaxyApp.Service\\Implement\\ProductService.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAArwCYAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T17:34:23.229Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-14T17:34:23.229Z"
             },
             {
               "$type": "Document",
