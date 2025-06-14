@@ -10,6 +10,7 @@ namespace GalaxyApp.Infrastructure
         public static IServiceCollection AddServicesDependencies(this IServiceCollection Service)
         {
             Service.AddScoped<IProductService, ProductService>();
+            Service.AddScoped<IFileServices, FileServices>();
             Service.AddScoped<ISupplierService, SupplierService>();
             Service.AddScoped<IPurchaseService, PurchaseService>();
             Service.AddScoped<ICustomerServices, CustomerServices>();

@@ -42,6 +42,7 @@ namespace GalaxyApp.Core.Features.Products.Queries.Handlers
 
             int BagStart = (request.PageNumber - 1) * request.PageSize;
             int BagEnd = request.PageNumber * request.PageSize;
+            BagEnd = Math.Min(BagEnd, QueryableList.Count);
 
 
 

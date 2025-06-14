@@ -1,0 +1,228 @@
+{
+  "Version": 1,
+  "Hash": "caNB9oPcciz3Pp6pKD4BEqah6/iWnXldTkOJ7aYp1fM=",
+  "Source": "GalaxyApp.APIs",
+  "BasePath": "_content/GalaxyApp.APIs",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "GalaxyApp.APIs\\wwwroot",
+      "Source": "GalaxyApp.APIs",
+      "ContentRoot": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\wwwroot\\",
+      "BasePath": "_content/GalaxyApp.APIs",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\wwwroot\\Files\\Products\\0fcf85d2-cdcc-48f9-8479-e4870270c348LetCode_50_'24.png",
+      "SourceId": "GalaxyApp.APIs",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\wwwroot\\",
+      "BasePath": "_content/GalaxyApp.APIs",
+      "RelativePath": "Files/Products/0fcf85d2-cdcc-48f9-8479-e4870270c348LetCode_50_'24#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dtlzkccdg8",
+      "Integrity": "MZ1HIMwrE9IX21LgSV6buUgf12kdX/Ws4odO7XE7mY0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Files\\Products\\0fcf85d2-cdcc-48f9-8479-e4870270c348LetCode_50_'24.png"
+    },
+    {
+      "Identity": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\wwwroot\\Files\\Products\\29c71011-cad5-4dc1-b901-964ac417a764LetCode_50_'24.png",
+      "SourceId": "GalaxyApp.APIs",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\wwwroot\\",
+      "BasePath": "_content/GalaxyApp.APIs",
+      "RelativePath": "Files/Products/29c71011-cad5-4dc1-b901-964ac417a764LetCode_50_'24#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dtlzkccdg8",
+      "Integrity": "MZ1HIMwrE9IX21LgSV6buUgf12kdX/Ws4odO7XE7mY0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Files\\Products\\29c71011-cad5-4dc1-b901-964ac417a764LetCode_50_'24.png"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "Files/Products/0fcf85d2-cdcc-48f9-8479-e4870270c348LetCode_50_'24.dtlzkccdg8.png",
+      "AssetFile": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\wwwroot\\Files\\Products\\0fcf85d2-cdcc-48f9-8479-e4870270c348LetCode_50_'24.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "517383"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MZ1HIMwrE9IX21LgSV6buUgf12kdX/Ws4odO7XE7mY0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 19:29:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dtlzkccdg8"
+        },
+        {
+          "Name": "label",
+          "Value": "Files/Products/0fcf85d2-cdcc-48f9-8479-e4870270c348LetCode_50_'24.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-MZ1HIMwrE9IX21LgSV6buUgf12kdX/Ws4odO7XE7mY0="
+        }
+      ]
+    },
+    {
+      "Route": "Files/Products/0fcf85d2-cdcc-48f9-8479-e4870270c348LetCode_50_'24.png",
+      "AssetFile": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\wwwroot\\Files\\Products\\0fcf85d2-cdcc-48f9-8479-e4870270c348LetCode_50_'24.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "517383"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MZ1HIMwrE9IX21LgSV6buUgf12kdX/Ws4odO7XE7mY0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 19:29:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-MZ1HIMwrE9IX21LgSV6buUgf12kdX/Ws4odO7XE7mY0="
+        }
+      ]
+    },
+    {
+      "Route": "Files/Products/29c71011-cad5-4dc1-b901-964ac417a764LetCode_50_'24.dtlzkccdg8.png",
+      "AssetFile": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\wwwroot\\Files\\Products\\29c71011-cad5-4dc1-b901-964ac417a764LetCode_50_'24.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "517383"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MZ1HIMwrE9IX21LgSV6buUgf12kdX/Ws4odO7XE7mY0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 19:19:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dtlzkccdg8"
+        },
+        {
+          "Name": "label",
+          "Value": "Files/Products/29c71011-cad5-4dc1-b901-964ac417a764LetCode_50_'24.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-MZ1HIMwrE9IX21LgSV6buUgf12kdX/Ws4odO7XE7mY0="
+        }
+      ]
+    },
+    {
+      "Route": "Files/Products/29c71011-cad5-4dc1-b901-964ac417a764LetCode_50_'24.png",
+      "AssetFile": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\wwwroot\\Files\\Products\\29c71011-cad5-4dc1-b901-964ac417a764LetCode_50_'24.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "517383"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MZ1HIMwrE9IX21LgSV6buUgf12kdX/Ws4odO7XE7mY0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 19:19:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-MZ1HIMwrE9IX21LgSV6buUgf12kdX/Ws4odO7XE7mY0="
+        }
+      ]
+    }
+  ]
+}

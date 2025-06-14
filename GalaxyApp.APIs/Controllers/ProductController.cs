@@ -6,7 +6,6 @@ using GalaxyApp.Core.Features.Products.Queries.Handlers.GetAllProductHandlerDto;
 using GalaxyApp.Core.ResponseBase.GeneralResponse;
 using GalaxyApp.Core.ResponseBase.Paginations;
 using MediatR;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GalaxyApp.APIs.Controllers
@@ -40,9 +39,9 @@ namespace GalaxyApp.APIs.Controllers
         //    return BaseOk(await _mediator.Send(model));
         //}
 
-        [HttpPost]
-        [Authorize]
-        public async Task<ActionResult<BaseResponse<CreateProductModel>>> CreateProduct([FromBody] CreateProductModel model)
+        [HttpPost("AddProduct")]
+        //[Authorize]
+        public async Task<ActionResult<BaseResponse<CreateProductModel>>> CreateProduct([FromForm] CreateProductModel model)
         {
             return BaseOk(await _mediator.Send(model));
         }

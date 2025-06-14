@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\wwwroot\\Files\\Products\\0fcf85d2-cdcc-48f9-8479-e4870270c348LetCode_50_'24.png",
+      "PackagePath": "staticwebassets\\Files\\Products\\0fcf85d2-cdcc-48f9-8479-e4870270c348LetCode_50_'24.png"
+    },
+    {
+      "Id": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\wwwroot\\Files\\Products\\29c71011-cad5-4dc1-b901-964ac417a764LetCode_50_'24.png",
+      "PackagePath": "staticwebassets\\Files\\Products\\29c71011-cad5-4dc1-b901-964ac417a764LetCode_50_'24.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.GalaxyApp.APIs.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.GalaxyApp.APIs.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.GalaxyApp.APIs.props",
+      "PackagePath": "build\\GalaxyApp.APIs.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.GalaxyApp.APIs.props",
+      "PackagePath": "buildMultiTargeting\\GalaxyApp.APIs.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.GalaxyApp.APIs.props",
+      "PackagePath": "buildTransitive\\GalaxyApp.APIs.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
