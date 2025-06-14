@@ -11,11 +11,11 @@ namespace GalaxyApp.Core.Mapping.ProductMapping.ProductQueryMapping
         {
             CreateMap<Product, GetAllProductDto>();
 
-            CreateMap<Product, GetAllShopProductDto>()
-            .ForMember(dest => dest.Quantity, opt => opt.MapFrom(src => src.ShopQuantity));
+            //CreateMap<Product, GetAllShopProductDto>()
+            //.ForMember(dest => dest.Quantity, opt => opt.MapFrom(src => src.ShopQuantity));
 
-            CreateMap<Product, GetAllWarehouseProductDto>()
-               .ForMember(dest => dest.Quantity, opt => opt.MapFrom(src => src.WarehouseQuantity));
+            //CreateMap<Product, GetAllWarehouseProductDto>()
+            //   .ForMember(dest => dest.Quantity, opt => opt.MapFrom(src => src.WarehouseQuantity));
 
 
         }

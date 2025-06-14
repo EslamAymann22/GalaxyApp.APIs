@@ -13,8 +13,8 @@ namespace GalaxyApp.Service.Interfaces
 
         Task AddAsync(Product product);
         void Update(Product product); void Delete(Product product);
-        IQueryable<Product> GetQueryableNoTracking();
-        IQueryable<Product> ApplyOrderByAndSearchFilter(IQueryable<Product> Data, ProductOrderEnum? OrderBy, string? Search);
+        IEnumerable<Product> GetQueryableNoTracking();
+        IEnumerable<Product> ApplyOrderByAndSearchFilter(IEnumerable<Product> Data, ProductOrderEnum? OrderBy, string? Search);
         Task<HttpStatusCode> CheckProductUpdate(Product product);
 
         Task<bool> ChangeQuantityAsync(int ProductId, int Amount, TransferDetectionType transferDetectionType, bool Save);

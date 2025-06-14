@@ -217,47 +217,6 @@
   },
   {
     "ContainingType": "GalaxyApp.APIs.Controllers.ProductController",
-    "Method": "GetAllProducts",
-    "RelativePath": "api/Product",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "PageSize",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "PageNumber",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "OrderFilter",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "SearchFilter",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "GalaxyApp.Core.ResponseBase.Paginations.PaginatedResponse\u00601[[GalaxyApp.Core.Features.Products.Queries.Handlers.GetAllProductHandlerDto.GetAllProductDto, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "GalaxyApp.APIs.Controllers.ProductController",
     "Method": "CreateProduct",
     "RelativePath": "api/Product",
     "HttpMethod": "POST",
@@ -381,12 +340,17 @@
   },
   {
     "ContainingType": "GalaxyApp.APIs.Controllers.ProductController",
-    "Method": "GetAllShopProducts",
-    "RelativePath": "api/Product/Shop",
+    "Method": "GetAllProducts",
+    "RelativePath": "api/Product/GetAllProducts",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
+      {
+        "Name": "GetProductsType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
       {
         "Name": "PageSize",
         "Type": "System.Int32",
@@ -410,48 +374,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "GalaxyApp.Core.ResponseBase.GeneralResponse.BaseResponse\u00601[[System.Collections.Generic.List\u00601[[GalaxyApp.Core.Features.Products.Queries.Handlers.GetAllProductHandlerDto.GetAllShopProductDto, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "GalaxyApp.APIs.Controllers.ProductController",
-    "Method": "GetAllWarehouseProducts",
-    "RelativePath": "api/Product/Warehouse",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "PageSize",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "PageNumber",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "OrderFilter",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "SearchFilter",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "GalaxyApp.Core.ResponseBase.GeneralResponse.BaseResponse\u00601[[System.Collections.Generic.List\u00601[[GalaxyApp.Core.Features.Products.Queries.Handlers.GetAllProductHandlerDto.GetAllWarehouseProductDto, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "GalaxyApp.Core.ResponseBase.Paginations.PaginatedResponse\u00601[[GalaxyApp.Core.Features.Products.Queries.Handlers.GetAllProductHandlerDto.GetAllProductDto, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

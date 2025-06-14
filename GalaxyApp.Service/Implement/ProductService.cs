@@ -36,7 +36,7 @@ namespace GalaxyApp.Service.Implement
         public async Task<Product> GetByIdAsync(int Id)
         => await _productRepo.GetByIdAsync(Id);
 
-        public IQueryable<Product> GetQueryableNoTracking()
+        public IEnumerable<Product> GetQueryableNoTracking()
         => _productRepo.GetQueryableNoTracking();
         public async Task<HttpStatusCode> CheckProductUpdate(Product product)
         {
@@ -67,7 +67,7 @@ namespace GalaxyApp.Service.Implement
         public void Delete(Product product)
         => _productRepo.Delete(product);
 
-        public IQueryable<Product> ApplyOrderByAndSearchFilter(IQueryable<Product> Data, ProductOrderEnum? OrderBy, string? Search)
+        public IEnumerable<Product> ApplyOrderByAndSearchFilter(IEnumerable<Product> Data, ProductOrderEnum? OrderBy, string? Search)
         {
             if (Search != null)
             {

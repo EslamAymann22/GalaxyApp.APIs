@@ -10,7 +10,7 @@ namespace GalaxyApp.Core.Features.Products.Queries.Handlers
 
     public class GetAllProductModel : PaginationParams, IRequest<BaseResponse<PaginatedResponse<GetAllProductDto>>>
     {
-        //  public PaginationParams PaginationParams { get; set; }
+        public GetAllProductsEnum GetProductsType { get; set; } = GetAllProductsEnum.AllProducts;
 
     }
     public class GetAllProductHandler : BaseResponseHandler,
@@ -34,9 +34,27 @@ namespace GalaxyApp.Core.Features.Products.Queries.Handlers
             var QueryableDate = _productService.GetQueryableNoTracking();
             QueryableDate = _productService.ApplyOrderByAndSearchFilter
                 (QueryableDate, request.OrderFilter, request.SearchFilter);
-            var QueryableList = _mapper.ProjectTo<GetAllProductDto>(QueryableDate);
+            var MappedList = (_mapper.Map<List<GetAllProductDto>>(QueryableDate));
 
-            return Success(await QueryableList.ToPaginatedListAsync(request.PageNumber, request.PageSize));
+            var QueryableList = QueryableDate.ToList();
+
+
+
+            int BagStart = (request.PageNumber - 1) * request.PageSize;
+            int BagEnd = request.PageNumber * request.PageSize;
+
+
+
+            for (int idx = BagStart; idx < BagEnd; idx++)
+            {
+                if (request.GetProductsType == GetAllProductsEnum.ShopProducts)
+                    MappedList[idx].Quantity = QueryableList[idx].ShopQuantity;
+
+                else if (request.GetProductsType == GetAllProductsEnum.WarehouseProducts)
+                    MappedList[idx].Quantity = QueryableList[idx].WarehouseQuantity;
+
+            }
+            return Success(await MappedList.ToPaginatedListAsync(request.PageNumber, request.PageSize));
         }
     }
 

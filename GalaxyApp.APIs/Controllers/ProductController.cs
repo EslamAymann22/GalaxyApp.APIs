@@ -21,7 +21,7 @@ namespace GalaxyApp.APIs.Controllers
             this._mediator = mediator;
         }
 
-        [HttpGet]
+        [HttpGet("GetAllProducts")]
         public async Task<ActionResult<PaginatedResponse<GetAllProductDto>>> GetAllProducts([FromQuery] GetAllProductModel model)
         {
             return BaseOk(await _mediator.Send(model));
@@ -29,16 +29,16 @@ namespace GalaxyApp.APIs.Controllers
 
 
 
-        [HttpGet("Shop")]
-        public async Task<ActionResult<BaseResponse<List<GetAllShopProductDto>>>> GetAllShopProducts([FromQuery] GetAllShopProductModel model)
-        {
-            return BaseOk(await _mediator.Send(model));
-        }
-        [HttpGet("Warehouse")]
-        public async Task<ActionResult<BaseResponse<List<GetAllWarehouseProductDto>>>> GetAllWarehouseProducts([FromQuery] GetAllWarehouseProductModel model)
-        {
-            return BaseOk(await _mediator.Send(model));
-        }
+        //[HttpGet("GetAllShopProducts")]
+        //public async Task<ActionResult<BaseResponse<List<GetAllProductDto>>>> GetAllShopProducts([FromQuery] GetAllShopProductModel model)
+        //{
+        //    return BaseOk(await _mediator.Send(model));
+        //}
+        //[HttpGet("GetAllWarehouseProducts")]
+        //public async Task<ActionResult<BaseResponse<List<GetAllProductDto>>>> GetAllWarehouseProducts([FromQuery] GetAllWarehouseProductModel model)
+        //{
+        //    return BaseOk(await _mediator.Send(model));
+        //}
 
         [HttpPost]
         [Authorize]

@@ -23,3 +23,16 @@ C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.APIs\GalaxyApp.Data\obj\Debug\net
 C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.APIs\GalaxyApp.Data\obj\Debug\net8.0\refint\GalaxyApp.Data.dll
 C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.APIs\GalaxyApp.Data\obj\Debug\net8.0\GalaxyApp.Data.pdb
 C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.APIs\GalaxyApp.Data\obj\Debug\net8.0\ref\GalaxyApp.Data.dll
+C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.Data\bin\Debug\net8.0\GalaxyApp.Data.deps.json
+C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.Data\bin\Debug\net8.0\GalaxyApp.Data.dll
+C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.Data\bin\Debug\net8.0\GalaxyApp.Data.pdb
+C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.Data\obj\Debug\net8.0\GalaxyApp.Data.csproj.AssemblyReference.cache
+C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.Data\obj\Debug\net8.0\GalaxyApp.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.Data\obj\Debug\net8.0\GalaxyApp.Data.AssemblyInfoInputs.cache
+C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.Data\obj\Debug\net8.0\GalaxyApp.Data.AssemblyInfo.cs
+C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.Data\obj\Debug\net8.0\GalaxyApp.Data.csproj.CoreCompileInputs.cache
+C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.Data\obj\Debug\net8.0\GalaxyApp.Data.sourcelink.json
+C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.Data\obj\Debug\net8.0\GalaxyApp.Data.dll
+C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.Data\obj\Debug\net8.0\refint\GalaxyApp.Data.dll
+C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.Data\obj\Debug\net8.0\GalaxyApp.Data.pdb
+C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.Data\obj\Debug\net8.0\ref\GalaxyApp.Data.dll

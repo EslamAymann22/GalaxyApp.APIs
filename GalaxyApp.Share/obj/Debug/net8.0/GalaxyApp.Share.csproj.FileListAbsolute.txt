@@ -10,3 +10,15 @@ C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.APIs\GalaxyApp.Share\obj\Debug\ne
 C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.APIs\GalaxyApp.Share\obj\Debug\net8.0\refint\GalaxyApp.Share.dll
 C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.APIs\GalaxyApp.Share\obj\Debug\net8.0\GalaxyApp.Share.pdb
 C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.APIs\GalaxyApp.Share\obj\Debug\net8.0\ref\GalaxyApp.Share.dll
+C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.Share\bin\Debug\net8.0\GalaxyApp.Share.deps.json
+C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.Share\bin\Debug\net8.0\GalaxyApp.Share.dll
+C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.Share\bin\Debug\net8.0\GalaxyApp.Share.pdb
+C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.Share\obj\Debug\net8.0\GalaxyApp.Share.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.Share\obj\Debug\net8.0\GalaxyApp.Share.AssemblyInfoInputs.cache
+C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.Share\obj\Debug\net8.0\GalaxyApp.Share.AssemblyInfo.cs
+C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.Share\obj\Debug\net8.0\GalaxyApp.Share.csproj.CoreCompileInputs.cache
+C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.Share\obj\Debug\net8.0\GalaxyApp.Share.sourcelink.json
+C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.Share\obj\Debug\net8.0\GalaxyApp.Share.dll
+C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.Share\obj\Debug\net8.0\refint\GalaxyApp.Share.dll
+C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.Share\obj\Debug\net8.0\GalaxyApp.Share.pdb
+C:\Users\hhhh\Desktop\GalaxyApp.APIs\GalaxyApp.Share\obj\Debug\net8.0\ref\GalaxyApp.Share.dll

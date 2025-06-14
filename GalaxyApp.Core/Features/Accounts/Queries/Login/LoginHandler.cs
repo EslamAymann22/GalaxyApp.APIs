@@ -27,12 +27,13 @@ namespace GalaxyApp.Core.Features.Accounts.Queries.Login
         public async Task<BaseResponse<LoginDto>> Handle(LoginModel request, CancellationToken cancellationToken)
         {
             var user = await _userManager.FindByEmailAsync(request.Email);
-            //if (user is null)
-            //return Failed<LoginDto>(System.Net.HttpStatusCode.BadRequest, "Password or Email isn't correct!!");
+            bool LoginSuccess = true;
+            if (user is null)
+                LoginSuccess = false;
 
-            var SignInResult = await _userManager.CheckPasswordAsync(user, request.Password);
+            LoginSuccess &= await _userManager.CheckPasswordAsync(user, request.Password);
 
-            if (!SignInResult)
+            if (!LoginSuccess)
                 return Failed<LoginDto>(System.Net.HttpStatusCode.BadRequest, "Password or Email isn't correct!!");
 
             var Response = new LoginDto()
@@ -42,6 +43,7 @@ namespace GalaxyApp.Core.Features.Accounts.Queries.Login
                 UserId = user.Id,
                 UserRole = (await _userManager.GetRolesAsync(user)).FirstOrDefault()
             };
+
 
             return Success(Response);
         }

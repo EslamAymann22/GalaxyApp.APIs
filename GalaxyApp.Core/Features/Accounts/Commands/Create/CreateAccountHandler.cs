@@ -41,9 +41,7 @@ namespace GalaxyApp.Core.Features.Accounts.Commands.Create
             var Result = await _userManager.CreateAsync(User, request.Password);
 
             if (!Result.Succeeded)
-            {
                 return Failed<string>(System.Net.HttpStatusCode.BadRequest, Result.Errors.FirstOrDefault().Description);
-            }
             return Created("Account is created!");
 
         }
