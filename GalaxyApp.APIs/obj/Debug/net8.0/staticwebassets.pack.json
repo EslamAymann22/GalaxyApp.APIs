@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\Files\\Products\\29c71011-cad5-4dc1-b901-964ac417a764LetCode_50_'24.png"
     },
     {
+      "Id": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\wwwroot\\Files\\Suppliers\\6dd7d503-704d-4613-8074-577aa82f213bphoto_2024-09-18_21-42-12.jpg",
+      "PackagePath": "staticwebassets\\Files\\Suppliers\\6dd7d503-704d-4613-8074-577aa82f213bphoto_2024-09-18_21-42-12.jpg"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.GalaxyApp.APIs.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },

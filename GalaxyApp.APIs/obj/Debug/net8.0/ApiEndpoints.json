@@ -483,8 +483,8 @@
   },
   {
     "ContainingType": "GalaxyApp.APIs.Controllers.SupplierController",
-    "Method": "CreateSupplier",
-    "RelativePath": "api/Supplier",
+    "Method": "AddSupplier",
+    "RelativePath": "api/Supplier/AddSupplier",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -492,6 +492,11 @@
       {
         "Name": "Name",
         "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Photo",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
         "IsRequired": false
       }
     ],
@@ -510,7 +515,7 @@
   {
     "ContainingType": "GalaxyApp.APIs.Controllers.SupplierController",
     "Method": "GetAllSuppliers",
-    "RelativePath": "api/Supplier",
+    "RelativePath": "api/Supplier/GetAllSuppliers",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

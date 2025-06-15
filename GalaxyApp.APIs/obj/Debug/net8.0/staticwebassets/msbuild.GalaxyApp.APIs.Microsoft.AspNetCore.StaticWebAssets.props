@@ -36,5 +36,23 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Files\Products\29c71011-cad5-4dc1-b901-964ac417a764LetCode_50_'24.png'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Files\Suppliers\6dd7d503-704d-4613-8074-577aa82f213bphoto_2024-09-18_21-42-12.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>GalaxyApp.APIs</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/GalaxyApp.APIs</BasePath>
+      <RelativePath>Files/Suppliers/6dd7d503-704d-4613-8074-577aa82f213bphoto_2024-09-18_21-42-12.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>qw9k3kmsz9</Fingerprint>
+      <Integrity>1n0eUj8wbE7NOIQ338mwlj8/JXRG6haVIp9pKmoY5QI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Files\Suppliers\6dd7d503-704d-4613-8074-577aa82f213bphoto_2024-09-18_21-42-12.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
   </ItemGroup>
 </Project>

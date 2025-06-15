@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "caNB9oPcciz3Pp6pKD4BEqah6/iWnXldTkOJ7aYp1fM=",
+  "Hash": "mJdcv/5OAHrjaEmLvW1aR1t4wS3PNH3AgioBxL+Zq+E=",
   "Source": "GalaxyApp.APIs",
   "BasePath": "_content/GalaxyApp.APIs",
   "Mode": "Default",
@@ -57,6 +57,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Files\\Products\\29c71011-cad5-4dc1-b901-964ac417a764LetCode_50_'24.png"
+    },
+    {
+      "Identity": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\wwwroot\\Files\\Suppliers\\6dd7d503-704d-4613-8074-577aa82f213bphoto_2024-09-18_21-42-12.jpg",
+      "SourceId": "GalaxyApp.APIs",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\wwwroot\\",
+      "BasePath": "_content/GalaxyApp.APIs",
+      "RelativePath": "Files/Suppliers/6dd7d503-704d-4613-8074-577aa82f213bphoto_2024-09-18_21-42-12#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "qw9k3kmsz9",
+      "Integrity": "1n0eUj8wbE7NOIQ338mwlj8/JXRG6haVIp9pKmoY5QI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Files\\Suppliers\\6dd7d503-704d-4613-8074-577aa82f213bphoto_2024-09-18_21-42-12.jpg"
     }
   ],
   "Endpoints": [
@@ -221,6 +242,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-MZ1HIMwrE9IX21LgSV6buUgf12kdX/Ws4odO7XE7mY0="
+        }
+      ]
+    },
+    {
+      "Route": "Files/Suppliers/6dd7d503-704d-4613-8074-577aa82f213bphoto_2024-09-18_21-42-12.jpg",
+      "AssetFile": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\wwwroot\\Files\\Suppliers\\6dd7d503-704d-4613-8074-577aa82f213bphoto_2024-09-18_21-42-12.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "85731"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1n0eUj8wbE7NOIQ338mwlj8/JXRG6haVIp9pKmoY5QI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 22:53:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1n0eUj8wbE7NOIQ338mwlj8/JXRG6haVIp9pKmoY5QI="
+        }
+      ]
+    },
+    {
+      "Route": "Files/Suppliers/6dd7d503-704d-4613-8074-577aa82f213bphoto_2024-09-18_21-42-12.qw9k3kmsz9.jpg",
+      "AssetFile": "C:\\Users\\hhhh\\Desktop\\GalaxyApp.APIs\\GalaxyApp.APIs\\wwwroot\\Files\\Suppliers\\6dd7d503-704d-4613-8074-577aa82f213bphoto_2024-09-18_21-42-12.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "85731"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1n0eUj8wbE7NOIQ338mwlj8/JXRG6haVIp9pKmoY5QI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 22:53:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qw9k3kmsz9"
+        },
+        {
+          "Name": "label",
+          "Value": "Files/Suppliers/6dd7d503-704d-4613-8074-577aa82f213bphoto_2024-09-18_21-42-12.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1n0eUj8wbE7NOIQ338mwlj8/JXRG6haVIp9pKmoY5QI="
         }
       ]
     }
