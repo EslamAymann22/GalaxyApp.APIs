@@ -16,6 +16,6 @@ namespace GalaxyApp.Data.Entities.Identity
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public Gender Gender { get; set; }
-        //UserManager<AppUser> UserManager { get; set; }
+        public UserRole UserRole { get; set; } = UserRole.Blocked;
     }
 }

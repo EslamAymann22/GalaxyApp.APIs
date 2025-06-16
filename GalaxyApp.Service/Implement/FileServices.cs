@@ -24,8 +24,9 @@ namespace GalaxyApp.Service.Implement
             return NewName;
         }
 
-        public string UploadFile(IFormFile File, string FolderName)
+        public string UploadFile(IFormFile? File, string FolderName)
         {
+            if (File is null) return "null";
 
             string FolderPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\Files", FolderName);
 

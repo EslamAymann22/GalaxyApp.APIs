@@ -3,6 +3,7 @@ using GalaxyApp.Core;
 using GalaxyApp.Core.MiddleWare;
 using GalaxyApp.Data.Entities.Identity;
 using GalaxyApp.Infrastructure;
+using GalaxyApp.Infrastructure.DataSeeding;
 using GalaxyApp.Infrastructure.DbContextData;
 using GalaxyApp.Service;
 using Microsoft.AspNetCore.Identity;
@@ -61,8 +62,11 @@ namespace GalaxyApp.APIs
             try
             {
                 var DbContext = Services.GetRequiredService<GalaxyDbContext>();
-
                 await DbContext.Database.MigrateAsync();
+
+                var UserManager = Services.GetRequiredService<UserManager<AppUser>>();
+                var RoleManager = Services.GetRequiredService<RoleManager<IdentityRole>>();
+                await DataSeed.AddDataSeedAsync(DbContext, UserManager, RoleManager);
 
             }
             catch (Exception ex)

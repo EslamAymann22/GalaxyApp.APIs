@@ -46,7 +46,7 @@ namespace GalaxyApp.APIs.Controllers
             return BaseOk(await _mediator.Send(model));
         }
 
-        [HttpPut]
+        [HttpPut("UpdateProduct")]
         public async Task<ActionResult<BaseResponse<UpdateProductModel>>> UpdateProduct([FromQuery] UpdateProductModel model)
         {
             return BaseOk(await _mediator.Send(model));

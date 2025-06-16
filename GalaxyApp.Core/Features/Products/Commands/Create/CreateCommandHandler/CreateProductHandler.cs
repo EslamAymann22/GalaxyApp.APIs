@@ -43,10 +43,10 @@ namespace GalaxyApp.Core.Features.Products.Commands.Create.CreateCommandHandler
             if (request.Image is not null)
             {
 
-                var fileName = _fileServices.UploadFile(request.Image, "Products");
+                var filePath = _fileServices.UploadFile(request.Image, "Products");
                 var Request = _httpContextAccessor.HttpContext.Request;
                 var baseUrl = $"{Request.Scheme}://{Request.Host}";
-                product.ImageUrl = $"{baseUrl}/{fileName}";
+                product.ImageUrl = $"{baseUrl}/{filePath}";
             }
 
             await _productService.AddAsync(product);
