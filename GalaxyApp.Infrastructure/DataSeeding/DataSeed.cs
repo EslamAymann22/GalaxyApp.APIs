@@ -17,6 +17,7 @@ namespace GalaxyApp.Infrastructure.DataSeeding
             await AddProductsAsync(galaxyDb);
             await AddSuppliersAsync(galaxyDb);
             await AddCustomersAsync(galaxyDb);
+            await AddUsersAsync(userManager);
         }
 
         public static async Task AddRolesAsync(RoleManager<IdentityRole> roleManager)
@@ -107,7 +108,6 @@ namespace GalaxyApp.Infrastructure.DataSeeding
             );
             await galaxyDb.SaveChangesAsync();
         }
-
         public static async Task AddCustomersAsync(GalaxyDbContext galaxyDb)
         {
             if (await galaxyDb.customers.AnyAsync()) return;
@@ -122,7 +122,72 @@ namespace GalaxyApp.Infrastructure.DataSeeding
                 );
             await galaxyDb.SaveChangesAsync();
         }
+        public static async Task AddUsersAsync(UserManager<AppUser> userManager)
+        {
 
+            if (await userManager.Users.AnyAsync()) return;
+
+            var UserName = "Eslam";
+
+            var user = new AppUser
+            {
+                FirstName = UserName,
+                LastName = "Owner",
+                Email = $"{UserName}@gmail.com",
+                Gender = Gender.Male,
+                UserName = UserName,
+                PhoneNumber = "01277296213",
+                UserRole = UserRole.Owner
+            };
+            await userManager.CreateAsync(user, $"{UserName}@123");
+            await userManager.AddToRoleAsync(user, UserRole.Owner.ToString());
+
+            UserName = "Moo";
+
+            user = new AppUser
+            {
+                FirstName = UserName,
+                LastName = "seller",
+                Email = $"{UserName}@gmail.com",
+                Gender = Gender.Male,
+                UserName = UserName,
+                PhoneNumber = "01477496523",
+                UserRole = UserRole.seller
+            };
+            await userManager.CreateAsync(user, $"{UserName}@123");
+            await userManager.AddToRoleAsync(user, UserRole.seller.ToString());
+
+            UserName = "Joo";
+
+            user = new AppUser
+            {
+                FirstName = UserName,
+                LastName = "Manager",
+                Email = $"{UserName}@gmail.com",
+                Gender = Gender.Male,
+                UserName = UserName,
+                PhoneNumber = "01487496323",
+                UserRole = UserRole.Manager
+            };
+            await userManager.CreateAsync(user, $"{UserName}@123");
+            await userManager.AddToRoleAsync(user, UserRole.Manager.ToString());
+
+            UserName = "Toto";
+
+            user = new AppUser
+            {
+                FirstName = UserName,
+                LastName = "Manager",
+                Email = $"{UserName}@gmail.com",
+                Gender = Gender.Female,
+                UserName = UserName,
+                PhoneNumber = "01487496023",
+                UserRole = UserRole.Manager
+            };
+            await userManager.CreateAsync(user, $"{UserName}@123");
+            await userManager.AddToRoleAsync(user, UserRole.Manager.ToString());
+
+        }
     }
 
 }
