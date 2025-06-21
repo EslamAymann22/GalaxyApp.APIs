@@ -4,6 +4,7 @@ using GalaxyApp.Core.ResponseBase.GeneralResponse;
 using GalaxyApp.Core.ResponseBase.Paginations;
 using GalaxyApp.Service.Interfaces;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GalaxyApp.APIs.Controllers
@@ -21,15 +22,16 @@ namespace GalaxyApp.APIs.Controllers
         }
 
 
-
-        [HttpPost]
+        [Authorize(Roles = "Manager,Owner")]
+        [HttpPost("CreatePurchase")]
         public async Task<BaseResponse<string>> CreatePurchase([FromBody] CreatePurchaseModel Model)
         {
             return await _mediator.Send(Model);
         }
 
 
-        [HttpGet]
+        [Authorize(Roles = "Manager,Owner")]
+        [HttpGet("GetAllPurchase")]
         public async Task<ActionResult<BaseResponse<PaginatedResponse<GetAllPurchaseDto>>>> GetAllPurchase([FromQuery] GetAllPurchaseModel Model)
         {
             return Ok(await _mediator.Send(Model));

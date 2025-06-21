@@ -3,11 +3,12 @@ using GalaxyApp.Core.Features.CustomerInvoices.Queries;
 using GalaxyApp.Core.ResponseBase.GeneralResponse;
 using GalaxyApp.Core.ResponseBase.Paginations;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GalaxyApp.APIs.Controllers
 {
-
+    [Authorize(Roles = "seller")]
     public class CustomerPurchaseController : BaseController
     {
         private readonly IMediator _mediator;
@@ -17,13 +18,13 @@ namespace GalaxyApp.APIs.Controllers
             this._mediator = mediator;
         }
 
-        [HttpPost]
+        [HttpPost("CreateCustomerPurchase")]
         public async Task<ActionResult<BaseResponse<string>>> CreateCustomerPurchase([FromBody] CreateCustomerInvoiceModel model)
         {
             return BaseOk(await _mediator.Send(model));
         }
 
-        [HttpGet]
+        [HttpGet("GetAllCustomerPurchase")]
         public async Task<ActionResult<BaseResponse<PaginatedResponse<GetAllCustomerPurchaseDto>>>> GetAllCustomerPurchase([FromQuery] GetAllCustomerInvoicesModel Model)
         {
             return BaseOk(await _mediator.Send(Model));

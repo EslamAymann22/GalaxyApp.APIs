@@ -2,6 +2,7 @@
 using GalaxyApp.Core.Features.Roles.Queries;
 using GalaxyApp.Core.ResponseBase.GeneralResponse;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GalaxyApp.APIs.Controllers
@@ -15,19 +16,23 @@ namespace GalaxyApp.APIs.Controllers
         {
             this._mediator = mediator;
         }
+
+        [Authorize(Roles = "Owner")]
         [HttpGet("GetAllRoles")]
         public async Task<ActionResult<BaseResponse<List<GetAllRoleDto>>>> GetAllRoles()
         {
             return BaseOk(await _mediator.Send(new GetAllRolesModel()));
         }
 
-        [HttpGet("GetUserRolesById")]
+        [Authorize]
+        [HttpGet("GetUserRoles")]
         public async Task<ActionResult<BaseResponse<List<GetAllRoleDto>>>> GetUserRoles([FromQuery] GetUserRolesModel model)
         {
             return BaseOk(await _mediator.Send(model));
         }
 
-        [HttpGet("AddRoleFor")]
+        [Authorize(Roles = "Owner")]
+        [HttpGet("AddRoleForUser")]
         public async Task<ActionResult<BaseResponse<string>>> AddRoleFor([FromQuery] AddRoleModel model)
         {
             return BaseOk(await _mediator.Send(model));
