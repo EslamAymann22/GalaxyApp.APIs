@@ -1,0 +1,52 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/GalaxyApp.APIs/Files/Products/0eefda05-f0b8-4e42-b99e-46930aa48850LetCode_50_'24.dtlzkccdg8.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Files\Products\0eefda05-f0b8-4e42-b99e-46930aa48850LetCode_50_'24.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"dtlzkccdg8"},{"Name":"integrity","Value":"sha256-MZ1HIMwrE9IX21LgSV6buUgf12kdX/Ws4odO7XE7mY0="},{"Name":"label","Value":"_content/GalaxyApp.APIs/Files/Products/0eefda05-f0b8-4e42-b99e-46930aa48850LetCode_50_\u002724.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"517383"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022MZ1HIMwrE9IX21LgSV6buUgf12kdX/Ws4odO7XE7mY0=\u0022"},{"Name":"Last-Modified","Value":"Sat, 14 Jun 2025 22:57:50 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/GalaxyApp.APIs/Files/Products/0eefda05-f0b8-4e42-b99e-46930aa48850LetCode_50_'24.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Files\Products\0eefda05-f0b8-4e42-b99e-46930aa48850LetCode_50_'24.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-MZ1HIMwrE9IX21LgSV6buUgf12kdX/Ws4odO7XE7mY0="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"517383"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022MZ1HIMwrE9IX21LgSV6buUgf12kdX/Ws4odO7XE7mY0=\u0022"},{"Name":"Last-Modified","Value":"Sat, 14 Jun 2025 22:57:50 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/GalaxyApp.APIs/Files/Products/0fcf85d2-cdcc-48f9-8479-e4870270c348LetCode_50_'24.dtlzkccdg8.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Files\Products\0fcf85d2-cdcc-48f9-8479-e4870270c348LetCode_50_'24.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"dtlzkccdg8"},{"Name":"integrity","Value":"sha256-MZ1HIMwrE9IX21LgSV6buUgf12kdX/Ws4odO7XE7mY0="},{"Name":"label","Value":"_content/GalaxyApp.APIs/Files/Products/0fcf85d2-cdcc-48f9-8479-e4870270c348LetCode_50_\u002724.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"517383"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022MZ1HIMwrE9IX21LgSV6buUgf12kdX/Ws4odO7XE7mY0=\u0022"},{"Name":"Last-Modified","Value":"Sat, 14 Jun 2025 19:29:46 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/GalaxyApp.APIs/Files/Products/0fcf85d2-cdcc-48f9-8479-e4870270c348LetCode_50_'24.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Files\Products\0fcf85d2-cdcc-48f9-8479-e4870270c348LetCode_50_'24.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-MZ1HIMwrE9IX21LgSV6buUgf12kdX/Ws4odO7XE7mY0="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"517383"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022MZ1HIMwrE9IX21LgSV6buUgf12kdX/Ws4odO7XE7mY0=\u0022"},{"Name":"Last-Modified","Value":"Sat, 14 Jun 2025 19:29:46 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/GalaxyApp.APIs/Files/Products/29c71011-cad5-4dc1-b901-964ac417a764LetCode_50_'24.dtlzkccdg8.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Files\Products\29c71011-cad5-4dc1-b901-964ac417a764LetCode_50_'24.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"dtlzkccdg8"},{"Name":"integrity","Value":"sha256-MZ1HIMwrE9IX21LgSV6buUgf12kdX/Ws4odO7XE7mY0="},{"Name":"label","Value":"_content/GalaxyApp.APIs/Files/Products/29c71011-cad5-4dc1-b901-964ac417a764LetCode_50_\u002724.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"517383"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022MZ1HIMwrE9IX21LgSV6buUgf12kdX/Ws4odO7XE7mY0=\u0022"},{"Name":"Last-Modified","Value":"Sat, 14 Jun 2025 19:19:49 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/GalaxyApp.APIs/Files/Products/29c71011-cad5-4dc1-b901-964ac417a764LetCode_50_'24.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Files\Products\29c71011-cad5-4dc1-b901-964ac417a764LetCode_50_'24.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-MZ1HIMwrE9IX21LgSV6buUgf12kdX/Ws4odO7XE7mY0="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"517383"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022MZ1HIMwrE9IX21LgSV6buUgf12kdX/Ws4odO7XE7mY0=\u0022"},{"Name":"Last-Modified","Value":"Sat, 14 Jun 2025 19:19:49 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/GalaxyApp.APIs/Files/Suppliers/6dd7d503-704d-4613-8074-577aa82f213bphoto_2024-09-18_21-42-12.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Files\Suppliers\6dd7d503-704d-4613-8074-577aa82f213bphoto_2024-09-18_21-42-12.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-1n0eUj8wbE7NOIQ338mwlj8/JXRG6haVIp9pKmoY5QI="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"85731"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00221n0eUj8wbE7NOIQ338mwlj8/JXRG6haVIp9pKmoY5QI=\u0022"},{"Name":"Last-Modified","Value":"Sat, 14 Jun 2025 22:53:34 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/GalaxyApp.APIs/Files/Suppliers/6dd7d503-704d-4613-8074-577aa82f213bphoto_2024-09-18_21-42-12.qw9k3kmsz9.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Files\Suppliers\6dd7d503-704d-4613-8074-577aa82f213bphoto_2024-09-18_21-42-12.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"qw9k3kmsz9"},{"Name":"integrity","Value":"sha256-1n0eUj8wbE7NOIQ338mwlj8/JXRG6haVIp9pKmoY5QI="},{"Name":"label","Value":"_content/GalaxyApp.APIs/Files/Suppliers/6dd7d503-704d-4613-8074-577aa82f213bphoto_2024-09-18_21-42-12.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"85731"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00221n0eUj8wbE7NOIQ338mwlj8/JXRG6haVIp9pKmoY5QI=\u0022"},{"Name":"Last-Modified","Value":"Sat, 14 Jun 2025 22:53:34 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>

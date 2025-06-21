@@ -95,7 +95,7 @@
     "ContainingType": "GalaxyApp.APIs.Controllers.AccountController",
     "Method": "Login",
     "RelativePath": "api/Account/Login",
-    "HttpMethod": "GET",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -120,7 +120,7 @@
   {
     "ContainingType": "GalaxyApp.APIs.Controllers.CustomerController",
     "Method": "CreateCustomer",
-    "RelativePath": "api/Customer",
+    "RelativePath": "api/Customer/CreateCustomer",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -151,7 +151,7 @@
   {
     "ContainingType": "GalaxyApp.APIs.Controllers.CustomerPurchaseController",
     "Method": "CreateCustomerPurchase",
-    "RelativePath": "api/CustomerPurchase",
+    "RelativePath": "api/CustomerPurchase/CreateCustomerPurchase",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -177,7 +177,7 @@
   {
     "ContainingType": "GalaxyApp.APIs.Controllers.CustomerPurchaseController",
     "Method": "GetAllCustomerPurchase",
-    "RelativePath": "api/CustomerPurchase",
+    "RelativePath": "api/CustomerPurchase/GetAllCustomerPurchase",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -206,103 +206,6 @@
     "ReturnTypes": [
       {
         "Type": "GalaxyApp.Core.ResponseBase.GeneralResponse.BaseResponse\u00601[[GalaxyApp.Core.ResponseBase.Paginations.PaginatedResponse\u00601[[GalaxyApp.Core.Features.CustomerInvoices.Queries.GetAllCustomerPurchaseDto, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "GalaxyApp.APIs.Controllers.ProductController",
-    "Method": "UpdateProduct",
-    "RelativePath": "api/Product",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "Id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "Name",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Color",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "ImageFileName",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Evaluation",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "PurchasingPrice",
-        "Type": "System.Decimal",
-        "IsRequired": false
-      },
-      {
-        "Name": "sellingPrice",
-        "Type": "System.Decimal",
-        "IsRequired": false
-      },
-      {
-        "Name": "Discount",
-        "Type": "System.Decimal",
-        "IsRequired": false
-      },
-      {
-        "Name": "WarehouseQuantity",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "ShopQuantity",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "GalaxyApp.Core.ResponseBase.GeneralResponse.BaseResponse\u00601[[GalaxyApp.Core.Features.Products.Commands.Update.UpdateCommandHandler.UpdateProductModel, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "GalaxyApp.APIs.Controllers.ProductController",
-    "Method": "DeleteProduct",
-    "RelativePath": "api/Product",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "Id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "GalaxyApp.Core.ResponseBase.GeneralResponse.BaseResponse\u00601[[GalaxyApp.Core.Features.Products.Commands.Delete.DeleteProductHandler, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -370,6 +273,32 @@
   },
   {
     "ContainingType": "GalaxyApp.APIs.Controllers.ProductController",
+    "Method": "DeleteProduct",
+    "RelativePath": "api/Product/DeleteProduct",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "GalaxyApp.Core.ResponseBase.GeneralResponse.BaseResponse\u00601[[GalaxyApp.Core.Features.Products.Commands.Delete.DeleteProductHandler, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GalaxyApp.APIs.Controllers.ProductController",
     "Method": "GetAllProducts",
     "RelativePath": "api/Product/GetAllProducts",
     "HttpMethod": "GET",
@@ -415,9 +344,85 @@
     ]
   },
   {
+    "ContainingType": "GalaxyApp.APIs.Controllers.ProductController",
+    "Method": "UpdateProduct",
+    "RelativePath": "api/Product/UpdateProduct",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Color",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImageFileName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Evaluation",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PurchasingPrice",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "sellingPrice",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "Discount",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "WarehouseQuantity",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ShopQuantity",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Image",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "GalaxyApp.Core.ResponseBase.GeneralResponse.BaseResponse\u00601[[GalaxyApp.Core.Features.Products.Commands.Update.UpdateCommandHandler.UpdateProductModel, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "GalaxyApp.APIs.Controllers.PurchaseController",
     "Method": "CreatePurchase",
-    "RelativePath": "api/Purchase",
+    "RelativePath": "api/Purchase/CreatePurchase",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -443,7 +448,7 @@
   {
     "ContainingType": "GalaxyApp.APIs.Controllers.PurchaseController",
     "Method": "GetAllPurchase",
-    "RelativePath": "api/Purchase",
+    "RelativePath": "api/Purchase/GetAllPurchase",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -472,6 +477,83 @@
     "ReturnTypes": [
       {
         "Type": "GalaxyApp.Core.ResponseBase.GeneralResponse.BaseResponse\u00601[[GalaxyApp.Core.ResponseBase.Paginations.PaginatedResponse\u00601[[GalaxyApp.Core.Features.Purchases.Queries.GetAllPurchaseDto, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GalaxyApp.APIs.Controllers.RoleController",
+    "Method": "AddRoleFor",
+    "RelativePath": "api/Role/AddRoleForUser",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Role",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "GalaxyApp.Core.ResponseBase.GeneralResponse.BaseResponse\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GalaxyApp.APIs.Controllers.RoleController",
+    "Method": "GetAllRoles",
+    "RelativePath": "api/Role/GetAllRoles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "GalaxyApp.Core.ResponseBase.GeneralResponse.BaseResponse\u00601[[System.Collections.Generic.List\u00601[[GalaxyApp.Core.Features.Roles.Queries.GetAllRoleDto, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GalaxyApp.APIs.Controllers.RoleController",
+    "Method": "GetUserRoles",
+    "RelativePath": "api/Role/GetUserRoles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "GalaxyApp.Core.ResponseBase.GeneralResponse.BaseResponse\u00601[[System.Collections.Generic.List\u00601[[GalaxyApp.Core.Features.Roles.Queries.GetAllRoleDto, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -535,7 +617,7 @@
   {
     "ContainingType": "GalaxyApp.APIs.Controllers.TransferDetectionController",
     "Method": "CreateTransferDetection",
-    "RelativePath": "api/TransferDetection",
+    "RelativePath": "api/TransferDetection/CreateTransferDetection",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -557,26 +639,5 @@
         "StatusCode": 200
       }
     ]
-  },
-  {
-    "ContainingType": "GalaxyApp.APIs.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[GalaxyApp.APIs.WeatherForecast, GalaxyApp.APIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ],
-    "EndpointName": "GetWeatherForecast"
   }
 ]

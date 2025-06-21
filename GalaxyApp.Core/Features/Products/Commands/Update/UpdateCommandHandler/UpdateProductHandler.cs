@@ -68,3 +68,4 @@ namespace GalaxyApp.Core.Features.Products.Commands.Update.UpdateCommandHandler
             }
         }
     }
+}
