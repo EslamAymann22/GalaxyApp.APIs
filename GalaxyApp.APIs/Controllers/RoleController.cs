@@ -32,7 +32,7 @@ namespace GalaxyApp.APIs.Controllers
         }
 
         [Authorize(Roles = "Owner")]
-        [HttpGet("AddRoleForUser")]
+        [HttpPut("AddRoleForUser")]
         public async Task<ActionResult<BaseResponse<string>>> AddRoleFor([FromQuery] AddRoleModel model)
         {
             return BaseOk(await _mediator.Send(model));
