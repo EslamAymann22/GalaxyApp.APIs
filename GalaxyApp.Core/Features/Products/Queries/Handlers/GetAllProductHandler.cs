@@ -10,6 +10,7 @@ namespace GalaxyApp.Core.Features.Products.Queries.Handlers
 
     public class GetAllProductModel : PaginationParams, IRequest<BaseResponse<PaginatedResponse<GetAllProductDto>>>
     {
+        public ProductOrderEnum? OrderFilter { get; set; } = ProductOrderEnum.Id;
         public GetAllProductsEnum GetProductsType { get; set; } = GetAllProductsEnum.AllProducts;
 
     }

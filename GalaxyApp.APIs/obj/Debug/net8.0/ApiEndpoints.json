@@ -149,6 +149,68 @@
     ]
   },
   {
+    "ContainingType": "GalaxyApp.APIs.Controllers.CustomerController",
+    "Method": "GetAllCustomers",
+    "RelativePath": "api/Customer/GetAllCustomers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "SearchFilter",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "GalaxyApp.Core.ResponseBase.GeneralResponse.BaseResponse\u00601[[GalaxyApp.Core.ResponseBase.Paginations.PaginatedResponse\u00601[[GalaxyApp.Core.Features.Customers.Queries.GetCustomersDto, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GalaxyApp.APIs.Controllers.CustomerController",
+    "Method": "GetCustomerById",
+    "RelativePath": "api/Customer/GetCustomerById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "GalaxyApp.Core.ResponseBase.GeneralResponse.BaseResponse\u00601[[GalaxyApp.Core.Features.Customers.Queries.GetCustomersDto, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "GalaxyApp.APIs.Controllers.CustomerPurchaseController",
     "Method": "CreateCustomerPurchase",
     "RelativePath": "api/CustomerPurchase/CreateCustomerPurchase",
@@ -193,11 +255,6 @@
         "IsRequired": false
       },
       {
-        "Name": "OrderFilter",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
         "Name": "SearchFilter",
         "Type": "System.String",
         "IsRequired": false
@@ -206,6 +263,32 @@
     "ReturnTypes": [
       {
         "Type": "GalaxyApp.Core.ResponseBase.GeneralResponse.BaseResponse\u00601[[GalaxyApp.Core.ResponseBase.Paginations.PaginatedResponse\u00601[[GalaxyApp.Core.Features.CustomerInvoices.Queries.GetAllCustomerPurchaseDto, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "GalaxyApp.APIs.Controllers.CustomerPurchaseController",
+    "Method": "GetCustomerPurchaseById",
+    "RelativePath": "api/CustomerPurchase/GetCustomerPurchaseById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "GalaxyApp.Core.ResponseBase.GeneralResponse.BaseResponse\u00601[[GalaxyApp.Core.Features.CustomerInvoices.Queries.GetCustomerPurchaseByIdDto, GalaxyApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -306,6 +389,11 @@
     "Order": 0,
     "Parameters": [
       {
+        "Name": "OrderFilter",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
         "Name": "GetProductsType",
         "Type": "System.String",
         "IsRequired": false
@@ -318,11 +406,6 @@
       {
         "Name": "PageNumber",
         "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "OrderFilter",
-        "Type": "System.String",
         "IsRequired": false
       },
       {
@@ -464,11 +547,6 @@
         "IsRequired": false
       },
       {
-        "Name": "OrderFilter",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
         "Name": "SearchFilter",
         "Type": "System.String",
         "IsRequired": false
@@ -490,7 +568,7 @@
     "ContainingType": "GalaxyApp.APIs.Controllers.RoleController",
     "Method": "AddRoleFor",
     "RelativePath": "api/Role/AddRoleForUser",
-    "HttpMethod": "GET",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [

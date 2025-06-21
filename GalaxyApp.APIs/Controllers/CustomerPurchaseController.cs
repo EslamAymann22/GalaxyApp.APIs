@@ -29,6 +29,10 @@ namespace GalaxyApp.APIs.Controllers
         {
             return BaseOk(await _mediator.Send(Model));
         }
-
+        [HttpGet("GetCustomerPurchaseById")]
+        public async Task<ActionResult<BaseResponse<GetCustomerPurchaseByIdDto>>> GetCustomerPurchaseById([FromQuery] GetCustomerPurchaseByIdModel model)
+        {
+            return BaseOk(await _mediator.Send(model));
+        }
     }
 }
