@@ -26,9 +26,8 @@ namespace GalaxyApp.APIs
             builder.Services.AddSwaggerGen();
 
             builder.Services.AddDbContext<GalaxyDbContext>(Options =>
-            {
-                Options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-            });
+                Options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+            );
 
             builder.Services.AddIdentity<AppUser, IdentityRole>(Options =>
             {

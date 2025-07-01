@@ -1,6 +1,5 @@
 ﻿using GalaxyApp.Service.Interfaces;
 using Microsoft.AspNetCore.Http;
-using System.Text;
 
 namespace GalaxyApp.Service.Implement
 {
@@ -14,15 +13,15 @@ namespace GalaxyApp.Service.Implement
                 File.Delete(FilePath);
         }
 
-        public StringBuilder DeleteSpaceFromName(string Name)
-        {
-            var NewName = new StringBuilder();
-            var StringLen = Name.LongCount();
-            for (int i = 0; i < StringLen; i++)
-                NewName.Append(Name[i] == ' ' ? '_' : Name[i]);
+        //public StringBuilder DeleteSpaceFromName(string Name)
+        //{
+        //    var NewName = new StringBuilder();
+        //    var StringLen = Name.LongCount();
+        //    for (int i = 0; i < StringLen; i++)
+        //        NewName.Append(Name[i] == ' ' ? '_' : Name[i]);
 
-            return NewName;
-        }
+        //    return NewName;
+        //}
 
         public string UploadFile(IFormFile? File, string FolderName)
         {
@@ -30,7 +29,8 @@ namespace GalaxyApp.Service.Implement
 
             string FolderPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\Files", FolderName);
 
-            string FileName = $"{Guid.NewGuid()}{DeleteSpaceFromName(File.FileName)}";
+            //string FileName = $"{Guid.NewGuid()}{DeleteSpaceFromName(File.FileName)}";
+            string FileName = $"{Guid.NewGuid()}{File.FileName.Replace(" ", "_")}";
 
             string FilePath = Path.Combine(FolderPath, FileName);
 
